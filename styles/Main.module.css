@@ -1,0 +1,21 @@
+.banner {
+  background: #e5745d;
+  text-align: center;
+  color: whitesmoke;
+  padding: 5px;
+}
+.navBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+.bar {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+}
+.bar li {
+  padding: 0 8px 0 8px;
+}
