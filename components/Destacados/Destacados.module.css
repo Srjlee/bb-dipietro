@@ -1,0 +1,26 @@
+.destacados {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 4rem 2rem 4rem;
+  gap: 4rem;
+}
+.destacado_1 {
+  text-align: center;
+
+  width: 30rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../../public/img/slider-1.jpg);
+}
+.destacado_1_datos {
+  text-align: start;
+  color: whitesmoke;
+  position: relative;
+  top: 60%;
+  left: 5%;
+}
+.destacado_2 {
+  background: blue;
+  padding: 10rem;
+}

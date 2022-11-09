@@ -1,0 +1,16 @@
+.navBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+.bar {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 1.5rem;
+  color: #486683;
+}
+.bar li {
+  padding: 0 0.7rem;
+}
