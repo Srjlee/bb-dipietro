@@ -11,7 +11,7 @@ export default function Navbar() {
     <div>
       <nav className={s.navBar}>
         <div className={s.logo}>
-          <Image src={logo} height="90" alt="logo" />
+          <Image src={logo} height="90" alt="logo" priority />
         </div>
 
         <ul className={s.bar}>

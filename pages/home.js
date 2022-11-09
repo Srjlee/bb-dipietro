@@ -5,6 +5,7 @@ import Banner from "../components/Banner";
 import Navbar from "../components/Navbar";
 import Destacados from "../components/Destacados";
 import Categorias_banner from "../components/Categorias_banner";
+import Divisor from "../components/Divisor";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Navbar />
         <Destacados />
         <Categorias_banner />
+        <Divisor />
       </div>
     </div>
   );
