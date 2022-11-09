@@ -1,26 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Francois+One&family=Quicksand:wght@300&display=swap");
 .destacados {
   display: flex;
   justify-content: center;
-  margin: 2rem 4rem 2rem 4rem;
-  gap: 4rem;
+  margin: 2rem 4rem;
+  gap: 3rem;
 }
 .destacado_1 {
   text-align: center;
-
-  width: 30rem;
-  background-size: contain;
+  width: 48rem;
+  height: 32rem;
   background-repeat: no-repeat;
-  background-position: center;
   background-image: url(../../public/img/slider-1.jpg);
 }
 .destacado_1_datos {
   text-align: start;
   color: whitesmoke;
   position: relative;
+  font-family: "Quicksand", sans-serif;
   top: 60%;
   left: 5%;
 }
+.destacado_1_datos h2 {
+  font-family: "Francois One", sans-serif;
+  font-size: 4rem;
+  font-weight: 100;
+}
+
 .destacado_2 {
-  background: blue;
-  padding: 10rem;
+  width: 20rem;
+}
+.destacado_2_datos {
+  color: gray;
+  text-align: center;
+  margin-top: 1.2rem;
+  font-family: "Quicksand", sans-serif;
+}
+.destacado_2_datos h3 {
+  font-family: "Francois One", sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+  color: #486683;
+}
+.btn {
+  margin-top: 1rem;
+  width: 9rem;
+  padding: 0 0.5rem;
+}
+.btn p {
+  font-family: "Francois One", sans-serif;
+  color: #486683;
+  border: 2px dashed #486683;
+  padding: 0.2rem;
 }
