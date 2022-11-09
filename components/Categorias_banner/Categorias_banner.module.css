@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Francois+One&family=Quicksand:wght@300&display=swap");
+.container {
+  border: 1px dashed gray;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.categoria {
+  margin: 2rem 0;
+}
+.categoria p {
+  text-align: center;
+  font-family: "Francois One", sans-serif;
+  color: #486683;
+  font-weight: 200;
+}

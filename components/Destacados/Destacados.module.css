@@ -2,7 +2,7 @@
 .destacados {
   display: flex;
   justify-content: center;
-  margin: 2rem 4rem;
+  margin: 2rem 0;
   gap: 3rem;
 }
 .destacado_1 {
@@ -10,7 +10,7 @@
   width: 48rem;
   height: 32rem;
   background-repeat: no-repeat;
-  background-image: url(../../public/img/slider-1.jpg);
+  background-image: url(./slider-1.jpg);
 }
 .destacado_1_datos {
   text-align: start;

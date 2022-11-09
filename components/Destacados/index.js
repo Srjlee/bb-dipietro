@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import s from "./Destacados.module.css";
-import girlPower from "../../public/img/girls-power.jpg";
+import girlPower from "./girls-power.jpg";
 
 export default function index() {
   return (
