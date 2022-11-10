@@ -13,7 +13,22 @@ const datos = [
     nombre: "Line Sweater",
     ranking: 3,
     precio: "$46.00",
-  },
+  }, {
+    img: boy3,
+    nombre: "Line Sweater",
+    ranking: 3,
+    precio: "$46.00",
+  }, {
+    img: boy3,
+    nombre: "Line Sweater",
+    ranking: 3,
+    precio: "$46.00",
+  }, {
+    img: boy3,
+    nombre: "Line Sweater",
+    ranking: 3,
+    precio: "$46.00",
+  }
 ];
 
 const BestSeller = ({ prod }) => {
