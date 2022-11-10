@@ -6,29 +6,51 @@ import boy3 from "./boys-3-1-300x300.jpg";
 const getRanking = (ranking) => {
   return "★".repeat(ranking).padEnd(5, "☆");
 };
-
 const datos = [
   {
+    id: 1,
     img: boy3,
+    categoria: "Babies",
     nombre: "Line Sweater",
-    ranking: 3,
     precio: "$46.00",
-  }, {
+    bestSeller: false,
+    stock: 3,
+
+    ranking: 3,
+  },
+  {
+    id: 2,
     img: boy3,
+    categoria: "Babies",
     nombre: "Line Sweater",
-    ranking: 3,
     precio: "$46.00",
-  }, {
+    bestSeller: false,
+    stock: 3,
+
+    ranking: 3,
+  },
+  {
+    id: 3,
     img: boy3,
+    categoria: "Babies",
     nombre: "Line Sweater",
-    ranking: 3,
     precio: "$46.00",
-  }, {
+    bestSeller: false,
+    stock: 3,
+
+    ranking: 3,
+  },
+  {
+    id: 4,
     img: boy3,
+    categoria: "Babies",
     nombre: "Line Sweater",
-    ranking: 3,
     precio: "$46.00",
-  }
+    bestSeller: false,
+    stock: 3,
+
+    ranking: 3,
+  },
 ];
 
 const BestSeller = ({ prod }) => {
@@ -58,7 +80,7 @@ export default function index() {
       <h3>CATEGORIES</h3>
       <div className={s.productos}>
         {datos?.map((prod) => {
-          return <BestSeller prod={prod} key={prod.nombre} />;
+          return <BestSeller prod={prod} key={prod.id} />;
         })}
       </div>
     </div>
