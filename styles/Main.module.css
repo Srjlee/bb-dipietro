@@ -1,3 +1,11 @@
 .container {
   margin: 0 5rem;
 }
+.Categorias_Productos {
+  display: flex;
+  flex-direction: column;
+}
+.Categorias {
+  margin: 2rem;
+  width: 20rem;
+}

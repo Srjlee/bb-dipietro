@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import fav from "../../public/img/favorite.png";
+import fav from "../../public/img/favorito.png";
 import cart from "../../public/img/cart.png";
 import logo from "../../public/img/logo-retina.png";
-import search from "../../public/img/search.png";
+import search from "../../public/img/buscar.png";
 import s from "./Navbar.module.css";
 
 export default function Navbar() {

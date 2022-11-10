@@ -1,0 +1,28 @@
+.container {
+  width: 20rem;
+  display: flex;
+}
+
+.container input {
+  width: 90%;
+  border-top: 1.3px dashed gray;
+  border-left: 1.3px dashed gray;
+  border-bottom: 1.3px dashed gray;
+  border-right: none;
+  padding: 0 1rem;
+}
+.container input:focus {
+  outline: none;
+}
+
+.contenedor_img {
+  background-color: #e5745d;
+  align-items: center;
+  padding: 0.3rem;
+}
+.imagen {
+  align-items: center;
+  border: 1.5px dashed white;
+  margin-top: 0.2rem;
+  padding: 5px;
+}

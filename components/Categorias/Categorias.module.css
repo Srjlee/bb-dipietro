@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Francois+One&family=Quicksand:wght@300&display=swap");
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 0;
+  font-family: "Francois One", sans-serif;
+  color: #486683;
+}
+.container h3 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.categorias {
+  border: 1px dashed #486683;
+}
+
+.categorias_datos {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 1.1rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid gray;
+}
