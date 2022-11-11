@@ -9,12 +9,14 @@ import Divisor from "../components/Divisor";
 import Categorias from "../components/Categorias";
 import BestSellers from "../components/BestSellers";
 import Producto from "../components/Producto";
+import Newsletter from "../components/Newsletter";
+import Footer from "../components/Footer";
 import boy3 from "../public/img/productos/boys-8-1-580x870.jpg";
 
 export default function Home() {
   const datos = [
     {
-      id: 1,
+      id: 5,
       img: boy3,
       categoria: "Babies",
       nombre: "Line Sweater",
@@ -24,7 +26,7 @@ export default function Home() {
       ranking: 3,
     },
     {
-      id: 1,
+      id: 6,
       img: boy3,
       categoria: "Babies",
       nombre: "Line Sweater",
@@ -34,7 +36,7 @@ export default function Home() {
       ranking: 3,
     },
     {
-      id: 1,
+      id: 7,
       img: boy3,
       categoria: "Babies",
       nombre: "Line Sweater",
@@ -44,7 +46,7 @@ export default function Home() {
       ranking: 3,
     },
     {
-      id: 1,
+      id: 8,
       img: boy3,
       categoria: "Babies",
       nombre: "Line Sweater",
@@ -54,7 +56,7 @@ export default function Home() {
       ranking: 3,
     },
     {
-      id: 1,
+      id: 9,
       img: boy3,
       categoria: "Babies",
       nombre: "Line Sweater",
@@ -115,19 +117,23 @@ export default function Home() {
         <Navbar />
         <Destacados />
         <Categorias_banner />
-        <Divisor />
+        <Divisor text="NEW ARRIVALS" />
         <main className={s.Categorias_Productos}>
           <sidebar className={s.categorias}>
             <SearchBar />
             <Categorias />
             <BestSellers />
+            <Newsletter />
           </sidebar>
 
           {datos?.map((prod) => {
             return <Producto prod={prod} key={prod.id} />;
           })}
         </main>
+
+        <Divisor text="INSTAGRAM @KISRUS" />
       </div>
+      <Footer />
     </div>
   );
 }

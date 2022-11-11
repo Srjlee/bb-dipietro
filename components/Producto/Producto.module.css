@@ -2,9 +2,10 @@
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 0;
   grid-row-gap: 0;
+  margin-bottom: 2rem;
 }
 
 .imagen {
@@ -20,4 +21,24 @@
   padding: 0;
   margin: 0;
   text-align: center;
+}
+.categoria {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  color: #e5745d;
+}
+
+.nombre {
+  font-family: "Gilda Display", sans-serif;
+  color: #486683;
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+.precio {
+  font-family: "Francois One", sans-serif;
+  font-weight: 700;
+  color: #486683;
+  margin: 0.5rem 0;
 }

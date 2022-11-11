@@ -1,0 +1,6 @@
+.container {
+  height: 20rem;
+  padding-top: 3rem;
+
+  background-image: url("./fondo.png");
+}

@@ -1,5 +1,5 @@
 .container {
-  margin: 0 5rem;
+  margin: 0 3rem;
 }
 .Categorias_Productos {
   display: grid;
@@ -10,6 +10,7 @@
 }
 .categorias {
   grid-area: 1 / 1 / 5 / 2;
+  margin: 1rem;
 }
 
 .Productos {

@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Francois+One&family=Gilda+Display&family=Quicksand:wght@300;400;500;600;700&display=swap");
 .destacados {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin: 2rem 0;
-  gap: 3rem;
 }
 .destacado_1 {
   text-align: center;
