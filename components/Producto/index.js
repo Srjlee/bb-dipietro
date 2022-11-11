@@ -2,14 +2,10 @@ import React from "react";
 import s from "./Producto.module.css";
 import Image from "next/image";
 
-export default function index({ prod }) {
-  const imagenFondo = prod.img;
+export default function index({ prod, imagen }) {
   return (
     <div className={s.container}>
-      <div
-        className={s.imagen}
-        style={{ backgroundImage: `url(${imagenFondo})` }}
-      >
+      <div className={s.imagen} style={{ backgroundImage: `url(${imagen})` }}>
         {/* <Image src={prod.img} width="270" alt="Imagen del producto" priority /> */}
         <div className={s.addToCart} id={s.addToCart}>
           <ul className={s.addToCart_datos}>

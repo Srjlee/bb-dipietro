@@ -127,7 +127,7 @@ export default function Home() {
           </sidebar>
 
           {datos?.map((prod) => {
-            return <Producto prod={prod} key={prod.id} />;
+            return <Producto prod={prod} key={prod.id} imagen={prod.img.src} />;
           })}
         </main>
 
