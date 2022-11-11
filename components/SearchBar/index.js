@@ -29,7 +29,6 @@ export default function index() {
             <line x1="21" y1="21" x2="15" y2="15" />
           </svg>
         </div>
-        {/* <Image src={buscar} height="25" className={s.imagen} alt="Lupa" /> */}
       </div>
     </div>
   );

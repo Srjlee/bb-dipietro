@@ -2,17 +2,20 @@
   margin: 0 5rem;
 }
 .Categorias_Productos {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
 }
-.Categorias {
-  margin: 2rem;
-  width: 20rem;
+.categorias {
+  grid-area: 1 / 1 / 5 / 2;
 }
 
 .Productos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
 }

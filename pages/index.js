@@ -9,7 +9,7 @@ import Divisor from "../components/Divisor";
 import Categorias from "../components/Categorias";
 import BestSellers from "../components/BestSellers";
 import Producto from "../components/Producto";
-import boy3 from "../public/img/boys-3-1-300x300.jpg";
+import boy3 from "../public/img/productos/boys-8-1-580x870.jpg";
 
 export default function Home() {
   const datos = [
@@ -21,7 +21,56 @@ export default function Home() {
       precio: "$46.00",
       bestSeller: false,
       stock: 3,
-
+      ranking: 3,
+    },
+    {
+      id: 1,
+      img: boy3,
+      categoria: "Babies",
+      nombre: "Line Sweater",
+      precio: "$46.00",
+      bestSeller: false,
+      stock: 3,
+      ranking: 3,
+    },
+    {
+      id: 1,
+      img: boy3,
+      categoria: "Babies",
+      nombre: "Line Sweater",
+      precio: "$46.00",
+      bestSeller: false,
+      stock: 3,
+      ranking: 3,
+    },
+    {
+      id: 1,
+      img: boy3,
+      categoria: "Babies",
+      nombre: "Line Sweater",
+      precio: "$46.00",
+      bestSeller: false,
+      stock: 3,
+      ranking: 3,
+    },
+    {
+      id: 1,
+      img: boy3,
+      categoria: "Babies",
+      nombre: "Line Sweater",
+      precio: "$46.00",
+      bestSeller: false,
+      stock: 3,
+      ranking: 3,
+    },
+    {
+      id: 1,
+      img: boy3,
+      categoria: "Babies",
+      nombre: "Line Sweater",
+      precio: "$46.00",
+      bestSeller: false,
+      stock: 3,
       ranking: 3,
     },
     {
@@ -58,6 +107,7 @@ export default function Home() {
       ranking: 3,
     },
   ];
+
   return (
     <div>
       <Banner />
@@ -66,18 +116,17 @@ export default function Home() {
         <Destacados />
         <Categorias_banner />
         <Divisor />
-        <div className={s.Categorias_Productos}>
-          <sidebar className={s.Categorias}>
+        <main className={s.Categorias_Productos}>
+          <sidebar className={s.categorias}>
             <SearchBar />
             <Categorias />
             <BestSellers />
           </sidebar>
-          <main className={s.Productos}>
-            {/* {datos.map((prod) => {
-              return <Producto prod={prod} key={prod.id} />;
-            })} */}
-          </main>
-        </div>
+
+          {datos?.map((prod) => {
+            return <Producto prod={prod} key={prod.id} />;
+          })}
+        </main>
       </div>
     </div>
   );

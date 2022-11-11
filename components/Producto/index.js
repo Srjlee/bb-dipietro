@@ -6,10 +6,10 @@ export default function index({ prod }) {
   return (
     <div className={s.container}>
       <div className={s.imagen}>
-        <Image src={prod.img} alt="Imagen del producto" />
+        <Image src={prod.img} width="250" alt="Imagen del producto" />
       </div>
       <div className={s.datos}>
-        <p className={s.categoria}>{prod.Categoria}</p>
+        <p className={s.categoria}>{prod.categoria}</p>
         <p className={s.nombre}>{prod.nombre}</p>
         <p className={s.precio}>{prod.precio}</p>
       </div>
