@@ -42,7 +42,7 @@ export default function index() {
             <p>(13)</p>
           </div>
         </div>
-        <div className={s.categorias_datos}>
+        <div className={s.categorias_datos_ultima}>
           <div className={s.categoria}>
             <p>For Play</p>
           </div>

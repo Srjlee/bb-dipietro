@@ -7,7 +7,8 @@ body {
 }
 
 :root {  
-  --Marco: 0 3rem;
+  --Marco: 0 5rem;
+  --MarcoDivisor: 0 3rem;
   --azul: #486683;
   --rojo: #e5745d;
   --fran: "Francois One", sans-serif;

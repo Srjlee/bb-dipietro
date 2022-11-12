@@ -1,0 +1,5 @@
+.container {
+  border: 3px dashed gray;
+  margin: var(--MarcoDivisor);
+  text-transform: capitalize;
+}

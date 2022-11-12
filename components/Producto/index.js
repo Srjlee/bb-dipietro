@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import s from "./Producto.module.css";
-import Image from "next/image";
+import Link from "next/link";
 
 const heart = (
   <svg
@@ -37,24 +37,6 @@ const search = (
 );
 
 export default function index({ prod }) {
-  // const [mouse, setmouse] = useState({
-  //   MouseX: 0,
-  //   MouseY: 0,
-  // });
-
-  // useEffect(() => {
-  //   const mouse = document
-  //     .getElementById(prod.id)
-  //     .addEventListener("mousemove", (event) => {
-  //       setmouse({
-  //         MouseX: event.clientX,
-  //         MouseY: event.clientY,
-  //       });
-
-  //       console.log(mouse);
-  //     });
-  // }, []);
-
   return (
     <div className={s.container}>
       <div
@@ -78,25 +60,28 @@ export default function index({ prod }) {
               <ul className={s.addToCart_datos}>
                 <li>{heart}</li>
                 <li>add to cart</li>
+
                 <li>{search}</li>
               </ul>
             </div>
           </>
         )}
       </div>
-      <div className={s.datos}>
-        <div className={s.categoria}>
-          <p>{prod.categoria}</p>
+      <Link href={`/producto/${prod.id}`}>
+        <div className={s.datos}>
+          <div className={s.categoria}>
+            <p>{prod.categoria}</p>
+          </div>
+          <div className={s.nombre}>
+            <p>{prod.nombre}</p>
+          </div>
+          {prod.stock !== 0 ? (
+            <div className={s.precio}>{<p>${prod.precio}</p>}</div>
+          ) : (
+            <div className={s.precio}>{<p></p>}</div>
+          )}
         </div>
-        <div className={s.nombre}>
-          <p>{prod.nombre}</p>
-        </div>
-        {prod.stock !== 0 ? (
-          <div className={s.precio}>{<p>${prod.precio}</p>}</div>
-        ) : (
-          <div className={s.precio}>{<p></p>}</div>
-        )}
-      </div>
+      </Link>
 
       {/* 
       {mouse.MouseX ? (

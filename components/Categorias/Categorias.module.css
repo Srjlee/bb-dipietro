@@ -19,14 +19,24 @@
 .categorias_datos {
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
-
   display: flex;
   justify-content: space-between;
   margin: 1rem 1.1rem;
   padding: 0.3rem 0;
   border-bottom: 1px solid gray;
 }
+.categorias_datos_ultima {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 1.1rem;
+  padding: 0.3rem 0;
+}
 
 .categorias_datos:hover {
+  color: #e5745d;
+}
+.categorias_datos_ultima:hover {
   color: #e5745d;
 }

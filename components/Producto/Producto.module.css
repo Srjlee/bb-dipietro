@@ -95,5 +95,5 @@
   text-transform: uppercase;
   font-family: var(--franc);
   font-weight: 700;
-  border-radius: 45%;
+  border-radius: 16px 16px 16px 16px;
 }

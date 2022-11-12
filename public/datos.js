@@ -1,6 +1,10 @@
-export default datos = [
+const productos = [
   {
     id: 1,
+    img: [
+      "https://i.postimg.cc/SRg62MCJ/blue-Blouse.jpg",
+      "https://i.postimg.cc/9f9Y8z5n/blue-Blouse1.jpg",
+    ],
     categoria: "for girls",
     nombre: "blue blouse",
     precio: "22.00",
@@ -10,6 +14,10 @@ export default datos = [
   },
   {
     id: 2,
+    img: [
+      "https://i.postimg.cc/JzvQ5ZgX/brown-Rainy-Bag.jpg",
+      "https://i.postimg.cc/50qqJGt5/brown-Rainy-Bag1.jpg",
+    ],
     categoria: "for home",
     nombre: "brown rainy bag",
     precio: "15.00",
@@ -19,6 +27,10 @@ export default datos = [
   },
   {
     id: 3,
+    img: [
+      "https://i.postimg.cc/RF9KgRTW/rabbit-Bag.jpg",
+      "https://i.postimg.cc/9MpTK7xJ/rabbit-Bag1.jpg",
+    ],
     categoria: "for home",
     nombre: "rabbit bag",
     precio: "50.00",
@@ -28,6 +40,10 @@ export default datos = [
   },
   {
     id: 4,
+    img: [
+      "https://i.postimg.cc/9FS96Vp5/white-Blouse.jpg",
+      "https://i.postimg.cc/q7H37LS1/white-Blouse1.jpg",
+    ],
     categoria: "for girls",
     nombre: "white blouse",
     precio: "17.00",
@@ -37,6 +53,10 @@ export default datos = [
   },
   {
     id: 5,
+    img: [
+      "https://i.postimg.cc/5y2vV2T1/rainbow-Pillow.jpg",
+      "https://i.postimg.cc/6qbZ5NxZ/rainbow-Pillow1.jpg",
+    ],
     categoria: "for home",
     nombre: "rainbow pillow",
     precio: "50.00",
@@ -46,6 +66,10 @@ export default datos = [
   },
   {
     id: 6,
+    img: [
+      "https://i.postimg.cc/8z2h6DJB/pink-Dress.jpg",
+      "https://i.postimg.cc/mr773q7x/pink-Dress1.jpg",
+    ],
     categoria: "for girls",
     nombre: "pink dress",
     precio: "18.00",
@@ -55,6 +79,10 @@ export default datos = [
   },
   {
     id: 7,
+    img: [
+      "https://i.postimg.cc/QxMkLfZ5/patten-Shirt.jpg",
+      "https://i.postimg.cc/tRktmLwp/patten-Shirt1.jpg",
+    ],
     categoria: "for boys",
     nombre: "pattern shirt",
     precio: "28.00",
@@ -64,6 +92,10 @@ export default datos = [
   },
   {
     id: 8,
+    img: [
+      "https://i.postimg.cc/h42T0VQG/shorts-With-Suspenders.jpg",
+      "https://i.postimg.cc/Gh9Yg9vx/shorts-With-Suspenders2.jpg",
+    ],
     categoria: "for boys",
     nombre: "shorts with suspenders",
     precio: "40.00",
@@ -73,15 +105,20 @@ export default datos = [
   },
   {
     id: 9,
+    img: [
+      "https://i.postimg.cc/4NFvXpX0/denim-Jacket.jpg",
+      "https://i.postimg.cc/L59k8Tqc/denim-Jacket1.jpg",
+    ],
     categoria: "for girls",
     nombre: "denin jacket",
     precio: "60.00",
     bestSeller: "false",
-    stock: 2,
+    stock: 0,
     ranking: 4,
   },
   {
     id: 10,
+    img: "https://i.postimg.cc/htbYCCLm/rabbit-Casket-BS.jpg",
     categoria: "for home",
     nombre: "rabbit casket",
     precio: "17.00",
@@ -91,6 +128,7 @@ export default datos = [
   },
   {
     id: 11,
+    img: "https://i.postimg.cc/qMKSKBgj/yellow-Sweat-Shirt-BS.jpg",
     categoria: "for boys",
     nombre: "yellow sweatshirt",
     precio: "38.00",
@@ -100,6 +138,7 @@ export default datos = [
   },
   {
     id: 12,
+    img: "https://i.postimg.cc/7Zycnv2D/line-Sweater-BS.jpg",
     categoria: "for boys",
     nombre: "line sweater",
     precio: "46.00",
@@ -109,6 +148,7 @@ export default datos = [
   },
   {
     id: 13,
+    img: "https://i.postimg.cc/Y2ZTjL2v/grey-Suit-BS.jpg",
     categoria: "for boys",
     nombre: "grey suit",
     precio: "80.00",
@@ -117,3 +157,5 @@ export default datos = [
     ranking: 4,
   },
 ];
+
+module.exports = { productos };

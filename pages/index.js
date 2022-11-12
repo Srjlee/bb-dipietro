@@ -61,21 +61,9 @@ export default function Home({ productos }) {
 
 export async function getServerSideProps(context) {
   const { params, req, res, query } = context;
-  // let { categoria } = query;
-
-  // const Uri = `${process.env.URL}/api/catalogo${
-  //   categoria || orderPrice || MinPrice || MaxPrice ? "?" : ""
-  // }${categoria ? `categoria=${categoria}` : ""}${
-  //   orderPrice ? `orderPrice=${orderPrice}` : ""
-  // }${MinPrice ? `MinPrice=${MinPrice}&` : ""}${
-  //   MaxPrice ? `MaxPrice=${MaxPrice}` : ""
-  // }`;
 
   const consApi = await fetch("http://localhost:3000/api/datos");
   const productos = await consApi.json();
-
-  // const consCategories = await fetch(`${process.env.URL}/api/getCategories`);
-  // const categories = await consCategories.json();
 
   return {
     props: {
