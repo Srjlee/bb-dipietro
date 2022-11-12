@@ -35,11 +35,12 @@
 
 .producto_imagen {
   border-radius: 100%;
-  width: 3rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  /* overflow: hidden; */
-  align-items: center;
-  object-fit: contain;
+  height: 5rem;
+  width: 5rem;
 }
 .producto_img {
   object-position: 50% 50%;

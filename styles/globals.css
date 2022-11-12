@@ -6,9 +6,14 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-:root {
+:root {  
+  --Marco: 0 3rem;
   --azul: #486683;
+  --rojo: #e5745d;
   --fran: "Francois One", sans-serif;
+  --gilda: "Gilda Display", sans-serif;
+  --quick: font-family: "Quicksand", sans-serif;
+
 }
 
 a {

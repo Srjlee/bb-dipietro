@@ -19,7 +19,13 @@ import tira4 from "../public/img/tira/tira4.jpg";
 import tira5 from "../public/img/tira/tira5.jpg";
 import pruebaIMG from "../public/img/prod/blueBlouse.jpg";
 
-const imagenes = [tira1, tira2, tira3, tira4, tira5];
+const imagenes = [
+  { img: tira1, id: 1 },
+  { img: tira2, id: 2 },
+  { img: tira3, id: 3 },
+  { img: tira4, id: 4 },
+  { img: tira5, id: 5 },
+];
 
 export default function Home({ productos }) {
   return (
@@ -40,7 +46,7 @@ export default function Home({ productos }) {
 
           {productos?.map((prod) => {
             if (prod.bestSeller == "false") {
-              return <Producto prod={prod} key={prod.id} imagen={prod.img} />;
+              return <Producto prod={prod} key={prod.id} />;
             }
           })}
         </main>

@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import s from "./BestSellers.module.css";
-import boy3 from "./boys-3-1-300x300.jpg";
 
 const getRanking = (ranking) => {
   return "★".repeat(ranking).padEnd(5, "☆");
@@ -12,18 +11,8 @@ const BestSeller = ({ prod }) => {
     <div className={s.producto}>
       <div
         className={s.producto_imagen}
-        style={{ backgroundImage: `url(${prod.img})`, backgroundColor: "gray" }}
-      >
-        {console.log(prod.img)}
-        {/* <Image
-          src={prod.img}
-          width="80"
-          height="50"
-          alt="foto producto"
-          priority
-          className={s.producto_img}
-        /> */}
-      </div>
+        style={{ backgroundImage: `url(${prod.img})` }}
+      ></div>
       <div className={s.producto_datos}>
         <p>{prod.nombre}</p>
         <p className={s.ranking}>{getRanking(prod.ranking)}</p>

@@ -113,7 +113,7 @@ const datos = [
     nombre: "denin jacket",
     precio: "60.00",
     bestSeller: "false",
-    stock: 2,
+    stock: 0,
     ranking: 4,
   },
   {

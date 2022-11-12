@@ -4,3 +4,21 @@
 
   background-image: url("./fondo.png");
 }
+
+.redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color: #fff;
+}
+
+.derechos {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.822);
+  text-align: center;
+  padding: 0 1rem;
+}
+.derechos span {
+  font-weight: 700;
+}

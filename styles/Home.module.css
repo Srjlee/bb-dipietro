@@ -1,5 +1,5 @@
 .container {
-  margin: 0 3rem;
+  margin: var(--Marco);
 }
 .Categorias_Productos {
   display: grid;

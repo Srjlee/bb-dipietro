@@ -6,7 +6,15 @@ export default function index({ imagenes }) {
   return (
     <div className={s.container}>
       {imagenes.map((i) => {
-        return <Image src={i} width="200" className={s.img} />;
+        return (
+          <Image
+            key={i.id}
+            src={i.img}
+            width="200"
+            className={s.img}
+            alt="Imagen Footer"
+          />
+        );
       })}
     </div>
   );
