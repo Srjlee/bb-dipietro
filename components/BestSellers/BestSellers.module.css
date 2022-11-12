@@ -35,7 +35,9 @@
 
 .producto_imagen {
   border-radius: 100%;
-  overflow: hidden;
+  width: 3rem;
+
+  /* overflow: hidden; */
   align-items: center;
   object-fit: contain;
 }

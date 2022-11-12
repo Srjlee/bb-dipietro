@@ -11,105 +11,17 @@ import BestSellers from "../components/BestSellers";
 import Producto from "../components/Producto";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
-import boy3 from "../public/img/productos/boys-8-1-580x870.jpg";
+import Imagenes from "../components/Imagenes";
+import tira1 from "../public/img/tira/tira1.jpg";
+import tira2 from "../public/img/tira/tira2.jpg";
+import tira3 from "../public/img/tira/tira3.jpg";
+import tira4 from "../public/img/tira/tira4.jpg";
+import tira5 from "../public/img/tira/tira5.jpg";
+import pruebaIMG from "../public/img/prod/blueBlouse.jpg";
 
-export default function Home() {
-  const datos = [
-    {
-      id: 5,
-      img: boy3,
-      categoria: "Babies",
-      nombre: "Line Sweater",
-      precio: "$46.00",
-      bestSeller: false,
-      stock: 3,
-      ranking: 3,
-    },
-    {
-      id: 6,
-      img: boy3,
-      categoria: "Babies",
-      nombre: "Line Sweater",
-      precio: "$46.00",
-      bestSeller: false,
-      stock: 3,
-      ranking: 3,
-    },
-    {
-      id: 7,
-      img: boy3,
-      categoria: "Babies",
-      nombre: "Line Sweater",
-      precio: "$46.00",
-      bestSeller: false,
-      stock: 3,
-      ranking: 3,
-    },
-    {
-      id: 8,
-      img: boy3,
-      categoria: "Babies",
-      nombre: "Line Sweater",
-      precio: "$46.00",
-      bestSeller: false,
-      stock: 3,
-      ranking: 3,
-    },
-    {
-      id: 9,
-      img: boy3,
-      categoria: "Babies",
-      nombre: "Line Sweater",
-      precio: "$46.00",
-      bestSeller: false,
-      stock: 3,
-      ranking: 3,
-    },
-    {
-      id: 1,
-      img: boy3,
-      categoria: "Babies",
-      nombre: "Line Sweater",
-      precio: "$46.00",
-      bestSeller: false,
-      stock: 3,
-      ranking: 3,
-    },
-    {
-      id: 2,
-      img: boy3,
-      categoria: "Babies",
-      nombre: "Line Sweater",
-      precio: "$46.00",
-      bestSeller: false,
-      stock: 3,
+const imagenes = [tira1, tira2, tira3, tira4, tira5];
 
-      ranking: 3,
-    },
-    {
-      id: 3,
-      img: boy3,
-      categoria: "Babies",
-      nombre: "Line Sweater",
-      precio: "$46.00",
-      bestSeller: false,
-      stock: 3,
-
-      ranking: 3,
-    },
-    {
-      id: 4,
-      img: boy3,
-      categoria: "Babies",
-      nombre: "Line Sweater",
-      precio: "$46.00",
-      bestSeller: false,
-      stock: 3,
-
-      ranking: 3,
-    },
-  ];
-
+export default function Home({ productos }) {
   return (
     <div>
       <Banner />
@@ -122,18 +34,46 @@ export default function Home() {
           <sidebar className={s.categorias}>
             <SearchBar />
             <Categorias />
-            <BestSellers />
+            <BestSellers productos={productos} imagen={pruebaIMG.src} />
             <Newsletter />
           </sidebar>
 
-          {datos?.map((prod) => {
-            return <Producto prod={prod} key={prod.id} imagen={prod.img.src} />;
+          {productos?.map((prod) => {
+            if (prod.bestSeller == "false") {
+              return <Producto prod={prod} key={prod.id} imagen={prod.img} />;
+            }
           })}
         </main>
 
         <Divisor text="INSTAGRAM @KISRUS" />
+        <Imagenes imagenes={imagenes} />
       </div>
       <Footer />
     </div>
   );
+}
+
+export async function getServerSideProps(context) {
+  const { params, req, res, query } = context;
+  // let { categoria } = query;
+
+  // const Uri = `${process.env.URL}/api/catalogo${
+  //   categoria || orderPrice || MinPrice || MaxPrice ? "?" : ""
+  // }${categoria ? `categoria=${categoria}` : ""}${
+  //   orderPrice ? `orderPrice=${orderPrice}` : ""
+  // }${MinPrice ? `MinPrice=${MinPrice}&` : ""}${
+  //   MaxPrice ? `MaxPrice=${MaxPrice}` : ""
+  // }`;
+
+  const consApi = await fetch("http://localhost:3000/api/datos");
+  const productos = await consApi.json();
+
+  // const consCategories = await fetch(`${process.env.URL}/api/getCategories`);
+  // const categories = await consCategories.json();
+
+  return {
+    props: {
+      productos: productos,
+    },
+  };
 }

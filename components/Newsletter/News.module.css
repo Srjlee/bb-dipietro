@@ -8,7 +8,7 @@
   background-color: #e5745d;
 }
 .container input {
-  border: 1.3px dashed #fff;
+  border: 3px dashed #fff;
   background-color: #e5745d;
   width: 90%;
   padding: 0.5rem 1rem;
@@ -48,7 +48,7 @@
 .btn p {
   font-family: "Francois One", sans-serif;
   color: #e5745d;
-  border: 2px dashed #e5745d;
+  border: 3px dashed #e5745d;
   padding: 0.5rem;
   margin: 0;
 }

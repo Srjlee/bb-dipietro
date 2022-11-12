@@ -1,12 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import s from "./Producto.module.css";
 import Image from "next/image";
 
 export default function index({ prod, imagen }) {
+  // const [mouse, setmouse] = useState({
+  //   MouseX: 0,
+  //   MouseY: 0,
+  // });
+
+  // useEffect(() => {
+  //   const mouse = document
+  //     .getElementById(prod.id)
+  //     .addEventListener("mousemove", (event) => {
+  //       setmouse({
+  //         MouseX: event.clientX,
+  //         MouseY: event.clientY,
+  //       });
+
+  //       console.log(mouse);
+  //     });
+  // }, []);
+
   return (
     <div className={s.container}>
-      <div className={s.imagen} style={{ backgroundImage: `url(${imagen})` }}>
-        {/* <Image src={prod.img} width="270" alt="Imagen del producto" priority /> */}
+      <div
+        className={s.imagen}
+        id={prod.id}
+        style={{ backgroundImage: `url(${imagen})` }}
+      >
         <div className={s.addToCart} id={s.addToCart}>
           <ul className={s.addToCart_datos}>
             <li>
@@ -54,9 +75,27 @@ export default function index({ prod, imagen }) {
           <p>{prod.nombre}</p>
         </div>
         <div className={s.precio}>
-          <p>{prod.precio}</p>
+          <p>${prod.precio}</p>
         </div>
       </div>
+      {/* 
+      {mouse.MouseX ? (
+        <>
+          <div
+            style={{
+              position: "absolute",
+              positionX: window.pageX,
+              width: "10rem",
+              height: "10rem",
+
+              backgroundImage: `url(${imagen}`,
+              backgroundSize: "10rem",
+              backgroundPositionX: `${mouse.MouseX}`,
+              backgroundPositionY: `${mouse.MouseY}`,
+            }}
+          ></div>
+        </>
+      ) : null} */}
     </div>
   );
 }

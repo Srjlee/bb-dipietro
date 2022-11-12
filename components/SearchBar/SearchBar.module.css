@@ -6,9 +6,9 @@
 
 .container input {
   width: 90%;
-  border-top: 1.3px dashed gray;
-  border-left: 1.3px dashed gray;
-  border-bottom: 1.3px dashed gray;
+  border-top: 3px dashed gray;
+  border-left: 3px dashed gray;
+  border-bottom: 3px dashed gray;
   border-right: none;
   padding: 0 1rem;
   font-family: "Quicksand", sans-serif;
