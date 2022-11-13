@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Francois+One&family=Gilda+Display&family=Quicksand:wght@300;400;500;600;700&display=swap");
+.container {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.container input {
+  width: 5rem;
+  height: 3rem;
+  border: 1px dashed gray;
+  padding: 0 1rem;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+}
+.container input:focus {
+  outline: none;
+}
+
+.container_text {
+  background-color: #e5745d;
+  width: 10rem;
+  height: 3rem;
+  align-items: center;
+  padding: 0.2rem;
+}
+.texto {
+  align-items: center;
+
+  border: 1.5px dashed white;
+  color: #fff;
+  align-items: center;
+  text-align: center;
+}
+.texto p {
+  padding: 0.5rem;
+  margin: 0;
+  font-family: var(--fran);
+}

@@ -1,6 +1,7 @@
 const productos = [
   {
     id: 1,
+    sku: "0001",
     img: [
       "https://i.postimg.cc/SRg62MCJ/blue-Blouse.jpg",
       "https://i.postimg.cc/9f9Y8z5n/blue-Blouse1.jpg",
@@ -14,6 +15,7 @@ const productos = [
   },
   {
     id: 2,
+    sku: "0002",
     img: [
       "https://i.postimg.cc/JzvQ5ZgX/brown-Rainy-Bag.jpg",
       "https://i.postimg.cc/50qqJGt5/brown-Rainy-Bag1.jpg",
@@ -27,6 +29,7 @@ const productos = [
   },
   {
     id: 3,
+    sku: "0003",
     img: [
       "https://i.postimg.cc/RF9KgRTW/rabbit-Bag.jpg",
       "https://i.postimg.cc/9MpTK7xJ/rabbit-Bag1.jpg",
@@ -40,6 +43,7 @@ const productos = [
   },
   {
     id: 4,
+    sku: "0004",
     img: [
       "https://i.postimg.cc/9FS96Vp5/white-Blouse.jpg",
       "https://i.postimg.cc/q7H37LS1/white-Blouse1.jpg",
@@ -53,6 +57,7 @@ const productos = [
   },
   {
     id: 5,
+    sku: "0005",
     img: [
       "https://i.postimg.cc/5y2vV2T1/rainbow-Pillow.jpg",
       "https://i.postimg.cc/6qbZ5NxZ/rainbow-Pillow1.jpg",
@@ -66,6 +71,7 @@ const productos = [
   },
   {
     id: 6,
+    sku: "0006",
     img: [
       "https://i.postimg.cc/8z2h6DJB/pink-Dress.jpg",
       "https://i.postimg.cc/mr773q7x/pink-Dress1.jpg",
@@ -79,6 +85,7 @@ const productos = [
   },
   {
     id: 7,
+    sku: "0007",
     img: [
       "https://i.postimg.cc/QxMkLfZ5/patten-Shirt.jpg",
       "https://i.postimg.cc/tRktmLwp/patten-Shirt1.jpg",
@@ -92,6 +99,7 @@ const productos = [
   },
   {
     id: 8,
+    sku: "0008",
     img: [
       "https://i.postimg.cc/h42T0VQG/shorts-With-Suspenders.jpg",
       "https://i.postimg.cc/Gh9Yg9vx/shorts-With-Suspenders2.jpg",
@@ -105,6 +113,7 @@ const productos = [
   },
   {
     id: 9,
+    sku: "0009",
     img: [
       "https://i.postimg.cc/4NFvXpX0/denim-Jacket.jpg",
       "https://i.postimg.cc/L59k8Tqc/denim-Jacket1.jpg",
@@ -118,6 +127,7 @@ const productos = [
   },
   {
     id: 10,
+    sku: "0010",
     img: "https://i.postimg.cc/htbYCCLm/rabbit-Casket-BS.jpg",
     categoria: "for home",
     nombre: "rabbit casket",
@@ -128,6 +138,7 @@ const productos = [
   },
   {
     id: 11,
+    sku: "0011",
     img: "https://i.postimg.cc/qMKSKBgj/yellow-Sweat-Shirt-BS.jpg",
     categoria: "for boys",
     nombre: "yellow sweatshirt",
@@ -138,6 +149,7 @@ const productos = [
   },
   {
     id: 12,
+    sku: "0012",
     img: "https://i.postimg.cc/7Zycnv2D/line-Sweater-BS.jpg",
     categoria: "for boys",
     nombre: "line sweater",
@@ -148,6 +160,7 @@ const productos = [
   },
   {
     id: 13,
+    sku: "0013",
     img: "https://i.postimg.cc/Y2ZTjL2v/grey-Suit-BS.jpg",
     categoria: "for boys",
     nombre: "grey suit",
@@ -157,5 +170,8 @@ const productos = [
     ranking: 4,
   },
 ];
+const getRanking = (ranking) => {
+  return "★".repeat(ranking).padEnd(5, "☆");
+};
 
-module.exports = { productos };
+module.exports = { productos, getRanking };

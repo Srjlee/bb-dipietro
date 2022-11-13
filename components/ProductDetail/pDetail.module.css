@@ -1,3 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Francois+One&family=Gilda+Display&family=Quicksand:wght@300;400;500;600;700&display=swap");
 .container {
-  margin: var(--Marco);
+  margin: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.imagen {
+  grid-area: 1 / 1 / 6 / 2;
+  height: 50rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.carrousel {
+  grid-area: 6 / 1 / 7 / 2;
+  background-color: white;
+  display: flex;
+}
+.detalle {
+  grid-area: 1 / 2 / 7 / 3;
+}
+
+.detPrecio {
+  color: var(--azul);
+  font-family: var(--fran);
+}
+.detRanking {
+  color: var(--rojo);
+  font-family: var(--fran);
+}
+.detTexto {
+  color: gray;
+}
+
+.imagen_carro {
+  margin-right: 1rem;
+  height: 9rem;
+  width: 9rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wishlist {
+  display: flex;
+  gap: 0.3rem;
+  color: gray;
+}
+.wishlist p:last-child {
+  color: var(--azul);
+  font-family: var(--fran);
 }

@@ -1,5 +1,30 @@
 .container {
-  border: 3px dashed gray;
+  border: 2px dashed var(--azul);
   margin: var(--MarcoDivisor);
   text-transform: capitalize;
+  padding: 3rem 0;
+}
+.container p {
+  margin: 0;
+}
+
+.titulo {
+  font-family: var(--gilda);
+  color: var(--azul);
+  text-align: center;
+  font-size: 3rem;
+}
+.detalle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--franc);
+  color: var(--azul);
+  font-weight: 500;
+}
+.detalle p {
+  margin-left: 0.5rem;
+}
+.detalle p:last-child {
+  color: var(--rojo);
 }

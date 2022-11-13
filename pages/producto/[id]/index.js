@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Banner from "../../../components/Banner";
 import Navbar from "../../../components/Navbar";
+import ProductDetail from "../../../components/ProductDetail";
 import Divisor from "../../../components/ProductDetail/divisor";
 import s from "../../../styles/pDetail.module.css";
 
@@ -15,6 +16,9 @@ export default function pDetail({ prod }) {
         <Navbar />
       </div>
       <Divisor prod={prod} />
+      <div className={s.container}>
+        <ProductDetail prod={prod} />
+      </div>
     </>
   );
 }
