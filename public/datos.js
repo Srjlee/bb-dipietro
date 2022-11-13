@@ -187,4 +187,54 @@ const getRanking = (ranking) => {
   return "★".repeat(ranking).padEnd(5, "☆");
 };
 
-module.exports = { productos, getRanking };
+const reviews = [
+  {
+    id: 1,
+    idProd: 1,
+    user: "Pablo Di Pietro",
+    userImg: "https://i.postimg.cc/rFW7bBrL/perfil.jpg",
+    rankOtorgado: 4,
+    descripcion:
+      "Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas y editoriales para previsualiza",
+  },
+  {
+    id: 2,
+    idProd: 1,
+    user: "Pepe Incognito",
+    userImg:
+      "https://i.postimg.cc/8PDx2yBJ/kisspng-computer-icons-person-black-shadow-5b25efb1047fd8-0063000815292128490184.png",
+    rankOtorgado: 5,
+    descripcion:
+      "Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas y editoriales para previsualiza",
+  },
+  {
+    id: 3,
+    idProd: 2,
+    user: "Pablo Di Pietro",
+    userImg: "https://i.postimg.cc/rFW7bBrL/perfil.jpg",
+    rankOtorgado: 4,
+    descripcion:
+      "Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas y editoriales para previsualiza",
+  },
+  {
+    id: 4,
+    idProd: 3,
+    user: "Johny Meconozco",
+    userImg:
+      "https://i.postimg.cc/8PDx2yBJ/kisspng-computer-icons-person-black-shadow-5b25efb1047fd8-0063000815292128490184.png",
+    rankOtorgado: 4,
+    descripcion:
+      "Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas y editoriales para previsualiza",
+  },
+  {
+    id: 5,
+    idProd: 5,
+    user: "Pablo Di Pietro",
+    userImg: "https://i.postimg.cc/rFW7bBrL/perfil.jpg",
+    rankOtorgado: 4,
+    descripcion:
+      "Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas y editoriales para previsualiza",
+  },
+];
+
+module.exports = { productos, getRanking, reviews };

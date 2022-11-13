@@ -10,6 +10,10 @@
 .container li {
   list-style: none;
   font-family: var(--fran);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   font-weight: 100;
   font-size: 3rem;

@@ -5,10 +5,20 @@ import Navbar from "../../../components/Navbar";
 import ProductDetail from "../../../components/ProductDetail";
 import Divisor from "../../../components/ProductDetail/divisor";
 import s from "../../../styles/pDetail.module.css";
+import DivGral from "../../../components/Divisor";
 
 export default function pDetail({ prod }) {
   const router = useRouter();
   const { id } = router.query;
+
+  const menuDiv = (
+    <ul>
+      <li>DESCRIPTION</li>
+      <li>ADDITIONAL INFORMATION</li>
+      <li>REVIEWS {`(${prod.reviews})`}</li>
+    </ul>
+  );
+
   return (
     <>
       <Banner />
@@ -18,6 +28,7 @@ export default function pDetail({ prod }) {
       <Divisor prod={prod} />
       <div className={s.container}>
         <ProductDetail prod={prod} />
+        <DivGral ul={menuDiv} />
       </div>
     </>
   );

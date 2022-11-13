@@ -11,11 +11,18 @@ export default function index({ text, ul }) {
       ) : (
         <>
           <ul>
-            <li>{text}</li>
+            <li>
+              {text}
+              <Image
+                src={divisor}
+                alt="Subrayado de frase"
+                width="100"
+                priority
+              />
+            </li>
           </ul>
         </>
       )}
-      <Image src={divisor} alt="Subrayado de frase" width="100" priority />
     </div>
   );
 }
