@@ -13,6 +13,9 @@ const productos = [
     stock: 5,
     ranking: 4,
     tags: ["blouse", "girls"],
+    color: "blue",
+    material: "cotton",
+    age: 6,
   },
   {
     id: 2,
@@ -28,6 +31,9 @@ const productos = [
     stock: 5,
     ranking: 4,
     tags: ["blouse", "girls"],
+    color: "brown",
+    material: "jean",
+    age: 6,
   },
   {
     id: 3,
@@ -43,6 +49,9 @@ const productos = [
     stock: 0,
     ranking: 5,
     tags: ["blouse", "girls"],
+    color: "brown",
+    material: "cuero",
+    age: 8,
   },
   {
     id: 4,
@@ -58,6 +67,9 @@ const productos = [
     stock: 6,
     ranking: 3,
     tags: ["blouse", "girls"],
+    color: "white",
+    material: "cotton",
+    age: 4,
   },
   {
     id: 5,
@@ -73,6 +85,9 @@ const productos = [
     stock: 0,
     ranking: 5,
     tags: ["blouse", "girls"],
+    color: "blue",
+    material: "plastic",
+    age: "4 - 6",
   },
   {
     id: 6,
@@ -88,6 +103,9 @@ const productos = [
     stock: 3,
     ranking: 4,
     tags: ["blouse", "girls"],
+    color: "pink",
+    material: "cotton",
+    age: "6 - 8",
   },
   {
     id: 7,
@@ -103,6 +121,9 @@ const productos = [
     stock: 2,
     ranking: 4,
     tags: ["blouse", "girls"],
+    color: "blue",
+    material: "cotton",
+    age: 6,
   },
   {
     id: 8,
@@ -118,6 +139,9 @@ const productos = [
     stock: 1,
     ranking: 5,
     tags: ["blouse", "girls"],
+    color: "blue",
+    material: "suspender",
+    age: 6,
   },
   {
     id: 9,
@@ -133,6 +157,9 @@ const productos = [
     stock: 0,
     ranking: 4,
     tags: ["blouse", "girls"],
+    color: "blue",
+    material: "corderoy",
+    age: "10 - 12",
   },
   {
     id: 10,
@@ -145,6 +172,9 @@ const productos = [
     stock: 1,
     ranking: 4,
     tags: ["blouse", "girls"],
+    color: "blue",
+    material: "cotton",
+    age: 6,
   },
   {
     id: 11,
@@ -157,6 +187,9 @@ const productos = [
     stock: 3,
     ranking: 4,
     tags: ["blouse", "girls"],
+    color: "yellow",
+    material: "cotton",
+    age: 6,
   },
   {
     id: 12,
@@ -169,6 +202,9 @@ const productos = [
     stock: 2,
     ranking: 4,
     tags: ["blouse", "girls"],
+    color: "blue",
+    material: "cotton",
+    age: 6,
   },
   {
     id: 13,
@@ -181,6 +217,9 @@ const productos = [
     stock: 1,
     ranking: 4,
     tags: ["blouse", "girls"],
+    color: "grey",
+    material: "cotton",
+    age: 6,
   },
 ];
 const getRanking = (ranking) => {
@@ -190,6 +229,7 @@ const getRanking = (ranking) => {
 const reviews = [
   {
     id: 1,
+    fecha: "December 5, 2022",
     idProd: 1,
     user: "Pablo Di Pietro",
     userImg: "https://i.postimg.cc/rFW7bBrL/perfil.jpg",
@@ -199,6 +239,7 @@ const reviews = [
   },
   {
     id: 2,
+    fecha: "December 15, 2018",
     idProd: 1,
     user: "Pepe Incognito",
     userImg:
@@ -209,6 +250,7 @@ const reviews = [
   },
   {
     id: 3,
+    fecha: "December 5, 2022",
     idProd: 2,
     user: "Pablo Di Pietro",
     userImg: "https://i.postimg.cc/rFW7bBrL/perfil.jpg",
@@ -218,6 +260,7 @@ const reviews = [
   },
   {
     id: 4,
+    fecha: "December 5, 2022",
     idProd: 3,
     user: "Johny Meconozco",
     userImg:
@@ -228,6 +271,7 @@ const reviews = [
   },
   {
     id: 5,
+    fecha: "December 5, 2022",
     idProd: 5,
     user: "Pablo Di Pietro",
     userImg: "https://i.postimg.cc/rFW7bBrL/perfil.jpg",

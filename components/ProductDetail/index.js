@@ -18,6 +18,7 @@ export default function index({ prod }) {
             <div
               className={s.imagen_carro}
               style={{ backgroundImage: `url(${i})` }}
+              key={i}
             ></div>
           );
         })}

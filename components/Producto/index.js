@@ -60,7 +60,6 @@ export default function index({ prod }) {
               <ul className={s.addToCart_datos}>
                 <li>{heart}</li>
                 <li>add to cart</li>
-
                 <li>{search}</li>
               </ul>
             </div>
@@ -82,25 +81,6 @@ export default function index({ prod }) {
           )}
         </div>
       </Link>
-
-      {/* 
-      {mouse.MouseX ? (
-        <>
-          <div
-            style={{
-              position: "absolute",
-              positionX: window.pageX,
-              width: "10rem",
-              height: "10rem",
-
-              backgroundImage: `url(${imagen}`,
-              backgroundSize: "10rem",
-              backgroundPositionX: `${mouse.MouseX}`,
-              backgroundPositionY: `${mouse.MouseY}`,
-            }}
-          ></div>
-        </>
-      ) : null} */}
     </div>
   );
 }
