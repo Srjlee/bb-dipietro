@@ -47,6 +47,7 @@
   display: flex;
   gap: 0.3rem;
   color: gray;
+  margin: 1rem 0;
 }
 .wishlist p:last-child {
   color: var(--azul);

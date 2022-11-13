@@ -3,6 +3,7 @@ import s from "./pDetail.module.css";
 import Image from "next/image";
 import { getRanking } from "../../public/datos";
 import AddToCart from "./addToCart";
+import AdditionalData from "./AdditionalData";
 
 export default function index({ prod }) {
   return (
@@ -39,6 +40,7 @@ export default function index({ prod }) {
             <p>Product added! </p>
             <p>Browse Wishlist</p>
           </div>
+          <AdditionalData prod={prod} />
         </div>
       </div>
     </div>

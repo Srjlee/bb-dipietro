@@ -12,6 +12,7 @@ const productos = [
     bestSeller: "false",
     stock: 5,
     ranking: 4,
+    tags: ["blouse", "girls"],
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ const productos = [
     bestSeller: "false",
     stock: 5,
     ranking: 4,
+    tags: ["blouse", "girls"],
   },
   {
     id: 3,
@@ -40,6 +42,7 @@ const productos = [
     bestSeller: "false",
     stock: 0,
     ranking: 5,
+    tags: ["blouse", "girls"],
   },
   {
     id: 4,
@@ -54,6 +57,7 @@ const productos = [
     bestSeller: "false",
     stock: 6,
     ranking: 3,
+    tags: ["blouse", "girls"],
   },
   {
     id: 5,
@@ -68,6 +72,7 @@ const productos = [
     bestSeller: "false",
     stock: 0,
     ranking: 5,
+    tags: ["blouse", "girls"],
   },
   {
     id: 6,
@@ -82,6 +87,7 @@ const productos = [
     bestSeller: "false",
     stock: 3,
     ranking: 4,
+    tags: ["blouse", "girls"],
   },
   {
     id: 7,
@@ -96,6 +102,7 @@ const productos = [
     bestSeller: "false",
     stock: 2,
     ranking: 4,
+    tags: ["blouse", "girls"],
   },
   {
     id: 8,
@@ -110,6 +117,7 @@ const productos = [
     bestSeller: "false",
     stock: 1,
     ranking: 5,
+    tags: ["blouse", "girls"],
   },
   {
     id: 9,
@@ -124,6 +132,7 @@ const productos = [
     bestSeller: "false",
     stock: 0,
     ranking: 4,
+    tags: ["blouse", "girls"],
   },
   {
     id: 10,
@@ -135,6 +144,7 @@ const productos = [
     bestSeller: "true",
     stock: 1,
     ranking: 4,
+    tags: ["blouse", "girls"],
   },
   {
     id: 11,
@@ -146,6 +156,7 @@ const productos = [
     bestSeller: "true",
     stock: 3,
     ranking: 4,
+    tags: ["blouse", "girls"],
   },
   {
     id: 12,
@@ -157,6 +168,7 @@ const productos = [
     bestSeller: "true",
     stock: 2,
     ranking: 4,
+    tags: ["blouse", "girls"],
   },
   {
     id: 13,
@@ -168,6 +180,7 @@ const productos = [
     bestSeller: "true",
     stock: 1,
     ranking: 4,
+    tags: ["blouse", "girls"],
   },
 ];
 const getRanking = (ranking) => {
