@@ -12,17 +12,19 @@ export default function index({ prod }) {
         className={s.imagen}
         style={{ backgroundImage: `url(${prod.img[0]})` }}
       ></div>
-      <div className={s.carrousel}>
-        {prod.img.map((i) => {
-          return (
-            <div
-              className={s.imagen_carro}
-              style={{ backgroundImage: `url(${i})` }}
-              key={i}
-            ></div>
-          );
-        })}
-      </div>
+      {prod.stock == 0 ? null : (
+        <div className={s.carrousel}>
+          {prod.img.map((i) => {
+            return (
+              <div
+                className={s.imagen_carro}
+                style={{ backgroundImage: `url(${i})` }}
+                key={i}
+              ></div>
+            );
+          })}
+        </div>
+      )}
       <div className={s.detalle}>
         <p className={s.detPrecio}>${prod.precio}</p>
         <p className={s.detRanking}>{getRanking(prod.ranking)}</p>

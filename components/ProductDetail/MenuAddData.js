@@ -1,8 +1,9 @@
 import { useState } from "react";
 import s from "./MenuAddData.module.css";
-import Link from "next/link";
 import AddInfo from "./AddInfo";
 import { getRanking } from "../../public/datos";
+import Imagen from "next/image";
+import subrayado from "../../public/home-8.png";
 
 export default function MenuAddData({ rev, prod }) {
   const InfoData = {
@@ -48,9 +49,12 @@ export default function MenuAddData({ rev, prod }) {
                 style={{ backgroundImage: `url(${r.userImg})` }}
               ></div>
               <div className={s.detalleReview}>
-                <div className={s.user}>{r.user}</div>
+                <div className={s.user}>
+                  <p>{r.user}</p>
+                  <p className={s.fecha}>{r.fecha}</p>
+                </div>
                 <div className={s.rating}>{getRanking(r.rankOtorgado)}</div>
-                <div className={s.descripcion}>{r.descripcion}</div>
+                <div className={s.revDescripcion}>{r.descripcion}</div>
               </div>
             </div>
           );
@@ -71,56 +75,50 @@ export default function MenuAddData({ rev, prod }) {
     <div className={s.container}>
       <div className={s.menu}>
         <ul>
-          {/* <Link
-            href="#descripcion"
-            onClick={() => {
-              setMostrar("descripcion");
-            }}
-          > */}
           <li
             onClick={() => {
               setMostrar("descripcion");
             }}
-            id="valor"
           >
             DESCRIPTION
           </li>
-          {/* </Link> */}
-        </ul>
-        <ul>
-          {/* <Link
-            href="#addInfo"
-            onClick={() => {
-              setMostrar("addInfo");
-            }}
-          > */}
-          <li
-            id={s.menuInfo}
-            onClick={() => {
-              setMostrar("addInfo");
-            }}
-          >
-            ADDITIONAL INFORMATION
-          </li>
-          {/* </Link> */}
-        </ul>
-        <ul>
-          {/* <Link
-            href="#reviews"
-            onClick={() => {
-              setMostrar("reviews");
-            }}
-          > */}
+
+          {prod.stock == 0 ? null : (
+            <li
+              onClick={() => {
+                setMostrar("addInfo");
+              }}
+            >
+              ADDITIONAL INFORMATION
+            </li>
+          )}
           <li
             onClick={() => {
               setMostrar("reviews");
             }}
-            id={s.menuReviews}
           >
             REVIEWS ({rev.length})
           </li>
-          {/* </Link> */}
         </ul>
+        {mostrar == "reviews" ? (
+          <Imagen
+            src={subrayado}
+            alt="subrayado"
+            style={{ position: "absolute", left: "66%", top: "277%" }}
+          />
+        ) : mostrar == "addInfo" ? (
+          <Imagen
+            src={subrayado}
+            alt="subrayado"
+            style={{ position: "absolute", left: "49%", top: "277%" }}
+          />
+        ) : (
+          <Imagen
+            src={subrayado}
+            alt="subrayado"
+            style={{ position: "absolute", left: "32%", top: "277%" }}
+          />
+        )}
       </div>
       <div className={s.informacion}>{renderStrategy(mostrar)}</div>
     </div>
