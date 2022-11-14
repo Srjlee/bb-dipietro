@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import s from "./Producto.module.css";
 import Link from "next/link";
+import { useHover } from "../../public/datos";
 
 const heart = (
   <svg
@@ -37,12 +38,17 @@ const search = (
 );
 
 export default function index({ prod }) {
+  const [hoverRef, isHovered] = useHover();
+
+  const imgRender = isHovered ? prod.img[1] : prod.img[0];
+
   return (
     <div className={s.container}>
       <div
         className={s.imagen}
         id={prod.id}
-        style={{ backgroundImage: `url(${prod.img[0]})` }}
+        style={{ backgroundImage: `url(${imgRender})` }}
+        ref={hoverRef}
       >
         {prod.stock == 0 ? (
           <>
