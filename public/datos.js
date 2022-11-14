@@ -164,7 +164,7 @@ const productos = [
   {
     id: 10,
     sku: "0010",
-    img: "https://i.postimg.cc/htbYCCLm/rabbit-Casket-BS.jpg",
+    img: ["https://i.postimg.cc/htbYCCLm/rabbit-Casket-BS.jpg"],
     categoria: "for home",
     nombre: "rabbit casket",
     precio: "17.00",
@@ -179,7 +179,7 @@ const productos = [
   {
     id: 11,
     sku: "0011",
-    img: "https://i.postimg.cc/qMKSKBgj/yellow-Sweat-Shirt-BS.jpg",
+    img: ["https://i.postimg.cc/qMKSKBgj/yellow-Sweat-Shirt-BS.jpg"],
     categoria: "for boys",
     nombre: "yellow sweatshirt",
     precio: "38.00",
@@ -194,7 +194,7 @@ const productos = [
   {
     id: 12,
     sku: "0012",
-    img: "https://i.postimg.cc/7Zycnv2D/line-Sweater-BS.jpg",
+    img: ["https://i.postimg.cc/7Zycnv2D/line-Sweater-BS.jpg"],
     categoria: "for boys",
     nombre: "line sweater",
     precio: "46.00",
@@ -209,7 +209,7 @@ const productos = [
   {
     id: 13,
     sku: "0013",
-    img: "https://i.postimg.cc/Y2ZTjL2v/grey-Suit-BS.jpg",
+    img: ["https://i.postimg.cc/Y2ZTjL2v/grey-Suit-BS.jpg"],
     categoria: "for boys",
     nombre: "grey suit",
     precio: "80.00",

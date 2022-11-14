@@ -2,6 +2,8 @@
 
 .banner {
   background: #e5745d;
+  font-family: var(--quick);
+  font-weight: 500;
   text-align: center;
   color: whitesmoke;
   padding: 0.5rem;

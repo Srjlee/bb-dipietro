@@ -66,7 +66,14 @@ export default function MenuAddData({ rev, prod }) {
   const renderStrategy = (mostrar) => {
     if (mostrar == "descripcion") return InfoData.descripcion;
     if (mostrar == "addInfo") return InfoData.addInfo;
-    if (mostrar == "reviews") return InfoData.reviews;
+    if (mostrar == "reviews") {
+      if (rev.length > 0) return InfoData.reviews;
+      return (
+        <div name="reviews" id={s.reviews}>
+          <h3> Be the first to leave a review.</h3>
+        </div>
+      );
+    }
   };
 
   const [mostrar, setMostrar] = useState("descripcion");

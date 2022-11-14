@@ -62,7 +62,11 @@
   overflow: auto;
   scrollbar-base-color: #ffeaff;
 }
-
+#reviews h3 {
+  text-align: center;
+  align-items: center;
+  height: 15rem;
+}
 .datosReviews {
   display: flex;
   flex-direction: row;
@@ -102,4 +106,7 @@
 .revDescripcion {
   margin-top: 1.5rem;
   color: rgb(183, 183, 183);
+}
+.qReviews {
+  text-transform: capitalize;
 }

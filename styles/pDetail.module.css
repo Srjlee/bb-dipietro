@@ -1,3 +1,13 @@
 .container {
   margin: 0 3rem;
 }
+
+.relatedProd {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 0px;
+  height: 35rem;
+  margin: 4rem 0;
+}

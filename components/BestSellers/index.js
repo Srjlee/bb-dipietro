@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Link from "next/link";
 import s from "./BestSellers.module.css";
 
 const getRanking = (ranking) => {
@@ -8,17 +8,19 @@ const getRanking = (ranking) => {
 
 const BestSeller = ({ prod }) => {
   return (
-    <div className={s.producto}>
-      <div
-        className={s.producto_imagen}
-        style={{ backgroundImage: `url(${prod.img})` }}
-      ></div>
-      <div className={s.producto_datos}>
-        <p>{prod.nombre}</p>
-        <p className={s.ranking}>{getRanking(prod.ranking)}</p>
-        <p>${prod.precio}</p>
+    <Link href={`/producto/${prod.id}`}>
+      <div className={s.producto}>
+        <div
+          className={s.producto_imagen}
+          style={{ backgroundImage: `url(${prod.img})` }}
+        ></div>
+        <div className={s.producto_datos}>
+          <p>{prod.nombre}</p>
+          <p className={s.ranking}>{getRanking(prod.ranking)}</p>
+          <p>${prod.precio}</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

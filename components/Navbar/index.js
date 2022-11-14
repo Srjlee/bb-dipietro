@@ -2,17 +2,22 @@ import React from "react";
 import Image from "next/image";
 import logo from "./logo-retina.png";
 import s from "./Navbar.module.css";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
     <div>
       <nav className={s.navBar}>
-        <div className={s.logo}>
-          <Image src={logo} height="90" alt="logo" priority />
-        </div>
+        <Link href="/">
+          <div className={s.logo}>
+            <Image src={logo} height="90" alt="logo" priority />
+          </div>
+        </Link>
 
         <ul className={s.bar}>
-          <li>HOME</li>
+          <Link href="/">
+            <li>HOME</li>
+          </Link>
           <li>SHOP FEATURES</li>
           <li>CLOTHES</li>
           <li>PAGES</li>
