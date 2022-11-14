@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useState } from "react";
 import s from "./pDetail.module.css";
 import Image from "next/image";
 import { getRanking } from "../../public/datos";
@@ -6,33 +6,23 @@ import AddToCart from "./addToCart";
 import AdditionalData from "./AdditionalData";
 
 export default function index({ prod }) {
-  const cursorRef = useRef(null);
-  useEffect(() => {
-    if (cursorRef.current == null || cursorRef == null) return;
-    document.addEventListener("mousemove", (e) => {
-      if (cursorRef.current == null) return;
-      cursorRef.current.setAttribute(
-        "style",
-        "top: " + e.pageY + "px; left: " + e.pageX + "px;"
-      );
-    });
-    document.addEventListener("click", () => {
-      if (cursorRef.current == null) return;
-      cursorRef.current.classList.add("expand");
-      setTimeout(() => {
-        if (cursorRef.current == null) return;
-        cursorRef.current.classList.remove("expand");
-      }, 500);
-    });
-  }, []);
+  const [imgRender, setImgRender] = useState(
+    prod.img[0]
+  )
+
+  const setImagen = (e) => {
+    setImgRender (e)
+  }
+  
+  
 
   return (
     <div className={s.container}>
       <div
         className={s.imagen}
         id="imagen"
-        style={{ backgroundImage: `url(${prod.img[0]})` }}
-      ></div>
+        style={{ backgroundImage: `url(${imgRender})` }}
+      >{console.log(imgRender)}</div>
       {prod.stock == 0 ? null : (
         <div className={s.carrousel}>
           {prod.img.map((i) => {
@@ -41,6 +31,7 @@ export default function index({ prod }) {
                 className={s.imagen_carro}
                 style={{ backgroundImage: `url(${i})` }}
                 key={i}
+                onClick={()=>setImagen(i)}
               ></div>
             );
           })}
