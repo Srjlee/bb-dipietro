@@ -81,38 +81,65 @@ export default function MenuAddData({ rev, prod }) {
   return (
     <div className={s.container}>
       <div className={s.menu}>
-        <ul>
-          <li
-            onClick={() => {
-              setMostrar("descripcion");
-            }}
-          >
-            DESCRIPTION
-          </li>
-
-          {prod.stock == 0 ? null : (
+        <div>
+          <ul>
             <li
               onClick={() => {
-                setMostrar("addInfo");
+                setMostrar("descripcion");
               }}
             >
-              ADDITIONAL INFORMATION
+              DESCRIPTION
             </li>
-          )}
-          <li
-            onClick={() => {
-              setMostrar("reviews");
-            }}
-          >
-            REVIEWS ({rev.length})
-          </li>
-        </ul>
-        {mostrar == "reviews" ? (
-          <Imagen
-            src={subrayado}
-            alt="subrayado"
-            style={{ position: "absolute", left: "66%", top: "277%" }}
-          />
+
+            {prod.stock == 0 ? null : (
+              <li
+                onClick={() => {
+                  setMostrar("addInfo");
+                }}
+              >
+                ADDITIONAL INFORMATION
+              </li>
+            )}
+            <li
+              onClick={() => {
+                setMostrar("reviews");
+              }}
+            >
+              REVIEWS ({rev.length})
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>
+              {mostrar == "descripcion" ? (
+                <Imagen
+                  src={subrayado}
+                  alt="subrayado"
+                  className={s.subrayadoDesc}
+                />
+              ) : null}
+            </li>
+            {prod.stock == 0 ? null : (
+              <li>
+                {mostrar == "addInfo" ? (
+                  <Imagen src={subrayado} alt="subrayado" />
+                ) : null}
+              </li>
+            )}
+            <li>
+              {mostrar == "reviews" ? (
+                <Imagen
+                  src={subrayado}
+                  alt="subrayado-rev"
+                  className={s.subrayadoRev}
+                />
+              ) : null}
+            </li>
+          </ul>
+        </div>
+
+        {/* {mostrar == "reviews" ? (
         ) : mostrar == "addInfo" ? (
           <Imagen
             src={subrayado}
@@ -125,7 +152,7 @@ export default function MenuAddData({ rev, prod }) {
             alt="subrayado"
             style={{ position: "absolute", left: "32%", top: "277%" }}
           />
-        )}
+        )} */}
       </div>
       <div className={s.informacion}>{renderStrategy(mostrar)}</div>
     </div>

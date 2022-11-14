@@ -1,22 +1,16 @@
-import { useState,useCallback } from "react";
+import { useState, useCallback } from "react";
 import s from "./pDetail.module.css";
 import { getRanking } from "../../public/datos";
 import AddToCart from "./addToCart";
 import AdditionalData from "./AdditionalData";
 import useEventListener from "./use-event-listener";
 
-
-
 export default function index({ prod }) {
-  const [imgRender, setImgRender] = useState(
-    prod.img[0]
-  )
-
-  
+  const [imgRender, setImgRender] = useState(prod.img[0]);
 
   const setImagen = (e) => {
-    setImgRender (e)
-  }
+    setImgRender(e);
+  };
 
   const [coords, setCoords] = useState({ x: 0, y: 0 });
 
@@ -32,8 +26,6 @@ export default function index({ prod }) {
 
   // Add event listener using our hook
   useEventListener("mousemove", handler);
-  
-  
 
   return (
     <div className={s.container}>
@@ -50,7 +42,7 @@ export default function index({ prod }) {
                 className={s.imagen_carro}
                 style={{ backgroundImage: `url(${i})` }}
                 key={i}
-                onClick={()=>setImagen(i)}
+                onClick={() => setImagen(i)}
               ></div>
             );
           })}
@@ -77,9 +69,9 @@ export default function index({ prod }) {
           <AdditionalData prod={prod} />
         </div>
       </div>
-      <h1>
+      {/* <h1>
           The mouse position is ({coords.x}, {coords.y})
-        </h1>
+        </h1> */}
     </div>
   );
 }
