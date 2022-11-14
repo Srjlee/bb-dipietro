@@ -1,15 +1,18 @@
 import { useState,useCallback } from "react";
 import s from "./pDetail.module.css";
-import Image from "next/image";
 import { getRanking } from "../../public/datos";
 import AddToCart from "./addToCart";
 import AdditionalData from "./AdditionalData";
 import useEventListener from "./use-event-listener";
 
+
+
 export default function index({ prod }) {
   const [imgRender, setImgRender] = useState(
     prod.img[0]
   )
+
+  
 
   const setImagen = (e) => {
     setImgRender (e)
@@ -36,7 +39,7 @@ export default function index({ prod }) {
     <div className={s.container}>
       <div
         className={s.imagen}
-        id="imagen"
+        id="imagenZoom"
         style={{ backgroundImage: `url(${imgRender})` }}
       ></div>
       {prod.stock == 0 ? null : (

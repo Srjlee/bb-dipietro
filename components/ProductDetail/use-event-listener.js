@@ -4,6 +4,7 @@ export default function useEventListener(
   eventName,
   handler,
   element = global.document
+  
 ) {
   // Create a ref that stores handler
   const savedHandler = useRef();
