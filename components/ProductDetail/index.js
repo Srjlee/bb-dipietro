@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState,useCallback } from "react";
 import s from "./pDetail.module.css";
 import Image from "next/image";
 import { getRanking } from "../../public/datos";
 import AddToCart from "./addToCart";
 import AdditionalData from "./AdditionalData";
+import useEventListener from "./use-event-listener";
 
 export default function index({ prod }) {
   const [imgRender, setImgRender] = useState(
@@ -13,6 +14,21 @@ export default function index({ prod }) {
   const setImagen = (e) => {
     setImgRender (e)
   }
+
+  const [coords, setCoords] = useState({ x: 0, y: 0 });
+
+  // Event handler utilizing useCallback ...
+  // ... so that reference never changes.
+  const handler = useCallback(
+    ({ clientX, clientY }) => {
+      // Update coordinates
+      setCoords({ x: clientX, y: clientY });
+    },
+    [setCoords]
+  );
+
+  // Add event listener using our hook
+  useEventListener("mousemove", handler);
   
   
 
@@ -22,7 +38,7 @@ export default function index({ prod }) {
         className={s.imagen}
         id="imagen"
         style={{ backgroundImage: `url(${imgRender})` }}
-      >{console.log(imgRender)}</div>
+      ></div>
       {prod.stock == 0 ? null : (
         <div className={s.carrousel}>
           {prod.img.map((i) => {
@@ -58,6 +74,9 @@ export default function index({ prod }) {
           <AdditionalData prod={prod} />
         </div>
       </div>
+      <h1>
+          The mouse position is ({coords.x}, {coords.y})
+        </h1>
     </div>
   );
 }

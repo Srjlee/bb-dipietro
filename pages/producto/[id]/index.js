@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import useEventListener from "./use-event-listener";
+
 import Banner from "../../../components/Banner";
 import Navbar from "../../../components/Navbar";
 import ProductDetail from "../../../components/ProductDetail";
@@ -13,20 +13,7 @@ import Footer from "../../../components/Footer";
 export default function pDetail({ prod, rev, related }) {
   const renderRelated = related.slice(0, 4);
 
-  const [coords, setCoords] = useState({ x: 0, y: 0 });
-
-  // Event handler utilizing useCallback ...
-  // ... so that reference never changes.
-  const handler = useCallback(
-    ({ clientX, clientY }) => {
-      // Update coordinates
-      setCoords({ x: clientX, y: clientY });
-    },
-    [setCoords]
-  );
-
-  // Add event listener using our hook
-  useEventListener("mousemove", handler);
+  
 
   return (
     <>
@@ -44,9 +31,7 @@ export default function pDetail({ prod, rev, related }) {
             return <Producto prod={p} key={p.id} />;
           })}
         </div>
-        <h1>
-          The mouse position is ({coords.x}, {coords.y})
-        </h1>
+        
       </div>
       <Footer />
     </>
