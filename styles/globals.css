@@ -5,6 +5,25 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+@layer base {
+  @font-face {
+    font-family: "Francois One";
+    src: url('../public/Francois_One/FrancoisOne-Regular.ttf') format('truetype');
+
+  }  
+}
+@layer base {
+  @font-face {
+    font-family: "Gilda Display";
+    src: url('../public/Gilda_Display/GildaDisplay-Regular.ttf') format('truetype');
+  }
+}
+@layer base {
+  @font-face {
+    font-family: "Quicksand";
+    src: url('../public/Quicksand/Quicksand-VariableFont_wght.ttf') format('truetype');
+  }
+}
 
 :root {  
   --Marco: 0 5rem;
