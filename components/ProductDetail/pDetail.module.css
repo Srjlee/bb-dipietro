@@ -3,14 +3,14 @@
   margin: 3rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
 
 .imagen {
   grid-area: 1 / 1 / 6 / 2;
-  height: 50rem;
+  height: 40rem;
   background-repeat: no-repeat;
   background-size: cover;
 }

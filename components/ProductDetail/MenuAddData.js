@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import s from "./MenuAddData.module.css";
 import AddInfo from "./AddInfo";
 import { getRanking } from "../../public/datos";
@@ -6,6 +6,7 @@ import Imagen from "next/image";
 import subrayado from "../../public/home-8.png";
 
 export default function MenuAddData({ rev, prod }) {
+  const [mostrar, setMostrar] = useState("");
   const InfoData = {
     descripcion: (
       <div className={s.descripcion}>
@@ -63,6 +64,7 @@ export default function MenuAddData({ rev, prod }) {
       </div>
     ),
   };
+
   const renderStrategy = (mostrar) => {
     if (mostrar == "descripcion") return InfoData.descripcion;
     if (mostrar == "addInfo") return InfoData.addInfo;
@@ -76,7 +78,9 @@ export default function MenuAddData({ rev, prod }) {
     }
   };
 
-  const [mostrar, setMostrar] = useState("descripcion");
+  useEffect(() => {
+    setMostrar("descripcion");
+  }, [prod]);
 
   return (
     <div className={s.container}>
@@ -89,15 +93,27 @@ export default function MenuAddData({ rev, prod }) {
               }}
             >
               DESCRIPTION
+              {mostrar == "descripcion" && (
+                <Imagen
+                  src={subrayado}
+                  alt="subrayado"
+                  className={s.subrayadoDesc}
+                />
+              )}
             </li>
 
-            {prod.stock == 0 ? null : (
+            {prod.stock == 0 ? (
+              <>{() => setMostrar("descripcion")}</>
+            ) : (
               <li
                 onClick={() => {
                   setMostrar("addInfo");
                 }}
               >
                 ADDITIONAL INFORMATION
+                {mostrar == "addInfo" && (
+                  <Imagen src={subrayado} alt="subrayado" />
+                )}
               </li>
             )}
             <li
@@ -106,53 +122,16 @@ export default function MenuAddData({ rev, prod }) {
               }}
             >
               REVIEWS ({rev.length})
-            </li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li>
-              {mostrar == "descripcion" ? (
-                <Imagen
-                  src={subrayado}
-                  alt="subrayado"
-                  className={s.subrayadoDesc}
-                />
-              ) : null}
-            </li>
-            {prod.stock == 0 ? null : (
-              <li>
-                {mostrar == "addInfo" ? (
-                  <Imagen src={subrayado} alt="subrayado" />
-                ) : null}
-              </li>
-            )}
-            <li>
-              {mostrar == "reviews" ? (
+              {mostrar == "reviews" && (
                 <Imagen
                   src={subrayado}
                   alt="subrayado-rev"
                   className={s.subrayadoRev}
                 />
-              ) : null}
+              )}
             </li>
           </ul>
         </div>
-
-        {/* {mostrar == "reviews" ? (
-        ) : mostrar == "addInfo" ? (
-          <Imagen
-            src={subrayado}
-            alt="subrayado"
-            style={{ position: "absolute", left: "49%", top: "277%" }}
-          />
-        ) : (
-          <Imagen
-            src={subrayado}
-            alt="subrayado"
-            style={{ position: "absolute", left: "32%", top: "277%" }}
-          />
-        )} */}
       </div>
       <div className={s.informacion}>{renderStrategy(mostrar)}</div>
     </div>

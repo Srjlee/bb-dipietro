@@ -1,39 +1,50 @@
-import { useState, useCallback } from "react";
+import { useState, useEffect } from "react";
 import s from "./pDetail.module.css";
 import { getRanking } from "../../public/datos";
 import AddToCart from "./addToCart";
 import AdditionalData from "./AdditionalData";
-import useEventListener from "./use-event-listener";
+import { useHover } from "../../public/datos";
 
 export default function index({ prod }) {
-  const [imgRender, setImgRender] = useState(prod.img[0]);
+  const [imgRender, setImgRender] = useState("");
+  const [hoverRef, isHovered] = useHover();
+  const [ejes, setEjes] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    setImgRender(prod.img[0]);
+  }, [prod]);
 
   const setImagen = (e) => {
     setImgRender(e);
   };
 
-  const [coords, setCoords] = useState({ x: 0, y: 0 });
-
-  // Event handler utilizing useCallback ...
-  // ... so that reference never changes.
-  const handler = useCallback(
-    ({ clientX, clientY }) => {
-      // Update coordinates
-      setCoords({ x: clientX, y: clientY });
-    },
-    [setCoords]
-  );
-
-  // Add event listener using our hook
-  useEventListener("mousemove", handler);
-
+  const onMouse = (e) => {
+    setEjes({ x: e.clientX, y: e.clientY });
+  };
   return (
     <div className={s.container}>
       <div
         className={s.imagen}
-        id="imagenZoom"
+        onMouseMove={onMouse}
+        ref={hoverRef}
         style={{ backgroundImage: `url(${imgRender})` }}
-      ></div>
+      >
+        {isHovered && (
+          <div
+            style={{
+              backgroundImage: `url(${imgRender})`,
+
+              height: "40rem",
+              width: "30rem",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "200%",
+              position: "absolute",
+              left: "50%",
+              backgroundPosition: `${-ejes.x + 50}px ${-ejes.y + 50}px`,
+            }}
+          ></div>
+        )}
+      </div>
       {prod.stock == 0 ? null : (
         <div className={s.carrousel}>
           {prod.img.map((i) => {
@@ -69,9 +80,6 @@ export default function index({ prod }) {
           <AdditionalData prod={prod} />
         </div>
       </div>
-      {/* <h1>
-          The mouse position is ({coords.x}, {coords.y})
-        </h1> */}
     </div>
   );
 }

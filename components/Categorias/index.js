@@ -1,5 +1,6 @@
 import React from "react";
 import s from "./Categorias.module.css";
+import Link from "next/link";
 
 export default function index() {
   return (
@@ -24,33 +25,39 @@ export default function index() {
             <p>(13)</p>
           </div>
         </div>
-        <div className={s.categorias_datos}>
-          <div className={s.categoria}>
-            <p>For Girls</p>
-          </div>
+        <Link href="/?categoria=for%20girls">
+          <div className={s.categorias_datos}>
+            <div className={s.categoria}>
+              <p>For Girls</p>
+            </div>
 
-          <div className={s.canidad}>
-            <p>(13)</p>
+            <div className={s.canidad}>
+              <p>(13)</p>
+            </div>
           </div>
-        </div>
-        <div className={s.categorias_datos}>
-          <div className={s.categoria}>
-            <p>For Home</p>
-          </div>
+        </Link>
+        <Link href="/?categoria=for home">
+          <div className={s.categorias_datos}>
+            <div className={s.categoria}>
+              <p>For Home</p>
+            </div>
 
-          <div className={s.canidad}>
-            <p>(13)</p>
+            <div className={s.canidad}>
+              <p>(13)</p>
+            </div>
           </div>
-        </div>
-        <div className={s.categorias_datos_ultima}>
-          <div className={s.categoria}>
-            <p>For Play</p>
-          </div>
+        </Link>
+        <Link href="/?categoria=for play">
+          <div className={s.categorias_datos_ultima}>
+            <div className={s.categoria}>
+              <p>For Play</p>
+            </div>
 
-          <div className={s.canidad}>
-            <p>(13)</p>
+            <div className={s.canidad}>
+              <p>(13)</p>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );

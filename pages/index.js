@@ -1,4 +1,5 @@
-import React from "react";
+import { useContext } from "react";
+import { cartContext } from "../context/provider";
 import s from "../styles/Home.module.css";
 import Banner from "../components/Banner";
 import Navbar from "../components/Navbar";
@@ -28,6 +29,8 @@ const imagenes = [
 ];
 
 export default function Home({ productos }) {
+  const { cart, setCart } = useContext(cartContext);
+
   return (
     <div>
       <Banner />
@@ -60,9 +63,13 @@ export default function Home({ productos }) {
 }
 
 export async function getServerSideProps(context) {
-  const { params, req, res, query } = context;
+  const { categoria } = context.query;
 
-  const consApi = await fetch("http://localhost:3000/api/datos");
+  const ruta = `http://localhost:3000/api/datos${
+    categoria ? `?categoria=${categoria}` : ""
+  }`;
+
+  const consApi = await fetch(ruta);
   const productos = await consApi.json();
 
   return {
