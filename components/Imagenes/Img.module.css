@@ -5,6 +5,12 @@
   gap: 0.5rem;
   margin: 5rem 0;
 }
+.img {
+  width: 20rem;
+  height: 12rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .img:hover {
   filter: sepia(50%);

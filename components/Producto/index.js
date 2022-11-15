@@ -1,7 +1,6 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState, useContext, useRef } from "react";
 import s from "./Producto.module.css";
 import Link from "next/link";
-import { useHover } from "../../public/datos";
 import { cartContext } from "../../context/provider";
 
 export default function index({ prod }) {
@@ -47,7 +46,10 @@ export default function index({ prod }) {
     setCart((prev) => [...prev, prod.id]);
   };
 
-  const favHandle = () => setFavoritos((prev) => [...prev, prod.id]);
+  const favHandle = () => {
+    if (!isFav) return setFavoritos((prev) => [...prev, prod.id]);
+    setFavoritos(favoritos.filter((f) => f !== prod.id));
+  };
 
   useEffect(() => {
     setImgRender(prod.img[0]);
@@ -56,8 +58,10 @@ export default function index({ prod }) {
     }
     if (favoritos.includes(prod.id)) {
       setIsfav(true);
+    } else {
+      setIsfav(false);
     }
-  }, [isHovered, favoritos]);
+  }, [isHovered, favoritos, isFav]);
 
   return (
     <div className={s.container}>
@@ -106,4 +110,26 @@ export default function index({ prod }) {
       </Link>
     </div>
   );
+}
+
+function useHover() {
+  const [value, setValue] = useState(false);
+  const ref = useRef(null);
+  const handleMouseOver = () => setValue(true);
+  const handleMouseOut = () => setValue(false);
+  useEffect(
+    () => {
+      const node = ref.current;
+      if (node) {
+        node.addEventListener("mouseover", handleMouseOver);
+        node.addEventListener("mouseout", handleMouseOut);
+        return () => {
+          node.removeEventListener("mouseover", handleMouseOver);
+          node.removeEventListener("mouseout", handleMouseOut);
+        };
+      }
+    },
+    [ref.current] // Recall only if ref changes
+  );
+  return [ref, value];
 }

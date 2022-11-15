@@ -1,8 +1,8 @@
-import { useState, useRef, useEffect } from "react";
+// import { useState, useRef, useEffect } from "react";
 
 const datos = [
   {
-    id: 1,
+    id: "1",
     sku: "0001",
     img: [
       "https://i.postimg.cc/SRg62MCJ/blue-Blouse.jpg",
@@ -17,10 +17,10 @@ const datos = [
     tags: ["blouse", "girls"],
     color: "blue",
     material: "cotton",
-    age: 6,
+    age: "6",
   },
   {
-    id: 2,
+    id: "2",
     sku: "0002",
     img: [
       "https://i.postimg.cc/JzvQ5ZgX/brown-Rainy-Bag.jpg",
@@ -35,10 +35,10 @@ const datos = [
     tags: ["blouse", "girls"],
     color: "brown",
     material: "jean",
-    age: 6,
+    age: "6",
   },
   {
-    id: 3,
+    id: "3",
     sku: "0003",
     img: [
       "https://i.postimg.cc/RF9KgRTW/rabbit-Bag.jpg",
@@ -53,10 +53,10 @@ const datos = [
     tags: ["blouse", "girls"],
     color: "brown",
     material: "cuero",
-    age: 8,
+    age: "8",
   },
   {
-    id: 4,
+    id: "4",
     sku: "0004",
     img: [
       "https://i.postimg.cc/9FS96Vp5/white-Blouse.jpg",
@@ -71,10 +71,10 @@ const datos = [
     tags: ["blouse", "girls"],
     color: "white",
     material: "cotton",
-    age: 4,
+    age: "4 - 5",
   },
   {
-    id: 5,
+    id: "5",
     sku: "0005",
     img: [
       "https://i.postimg.cc/5y2vV2T1/rainbow-Pillow.jpg",
@@ -92,7 +92,7 @@ const datos = [
     age: "4 - 6",
   },
   {
-    id: 6,
+    id: "6",
     sku: "0006",
     img: [
       "https://i.postimg.cc/8z2h6DJB/pink-Dress.jpg",
@@ -110,7 +110,7 @@ const datos = [
     age: "6 - 8",
   },
   {
-    id: 7,
+    id: "7",
     sku: "0007",
     img: [
       "https://i.postimg.cc/QxMkLfZ5/patten-Shirt.jpg",
@@ -125,10 +125,10 @@ const datos = [
     tags: ["blouse", "girls"],
     color: "blue",
     material: "cotton",
-    age: 6,
+    age: "6",
   },
   {
-    id: 8,
+    id: "8",
     sku: "0008",
     img: [
       "https://i.postimg.cc/h42T0VQG/shorts-With-Suspenders.jpg",
@@ -143,10 +143,10 @@ const datos = [
     tags: ["blouse", "girls"],
     color: "blue",
     material: "suspender",
-    age: 6,
+    age: "6",
   },
   {
-    id: 9,
+    id: "9",
     sku: "0009",
     img: [
       "https://i.postimg.cc/4NFvXpX0/denim-Jacket.jpg",
@@ -164,7 +164,7 @@ const datos = [
     age: "10 - 12",
   },
   {
-    id: 10,
+    id: "10",
     sku: "0010",
     img: ["https://i.postimg.cc/htbYCCLm/rabbit-Casket-BS.jpg"],
     categoria: "for home",
@@ -176,10 +176,10 @@ const datos = [
     tags: ["blouse", "girls"],
     color: "blue",
     material: "cotton",
-    age: 6,
+    age: "6",
   },
   {
-    id: 11,
+    id: "11",
     sku: "0011",
     img: ["https://i.postimg.cc/qMKSKBgj/yellow-Sweat-Shirt-BS.jpg"],
     categoria: "for boys",
@@ -191,10 +191,10 @@ const datos = [
     tags: ["blouse", "girls"],
     color: "yellow",
     material: "cotton",
-    age: 6,
+    age: "6",
   },
   {
-    id: 12,
+    id: "12",
     sku: "0012",
     img: ["https://i.postimg.cc/7Zycnv2D/line-Sweater-BS.jpg"],
     categoria: "for boys",
@@ -206,10 +206,10 @@ const datos = [
     tags: ["blouse", "girls"],
     color: "blue",
     material: "cotton",
-    age: 6,
+    age: "6",
   },
   {
-    id: 13,
+    id: "13",
     sku: "0013",
     img: ["https://i.postimg.cc/Y2ZTjL2v/grey-Suit-BS.jpg"],
     categoria: "for boys",
@@ -221,10 +221,10 @@ const datos = [
     tags: ["blouse", "girls"],
     color: "grey",
     material: "cotton",
-    age: 6,
+    age: "6",
   },
   {
-    id: 14,
+    id: "14",
     sku: "0014",
     img: [
       "https://i.postimg.cc/TYhnhYGJ/toys-1-580x870.jpg",
@@ -242,7 +242,7 @@ const datos = [
     age: "10 - 12",
   },
   {
-    id: 15,
+    id: "15",
     sku: "0015",
     img: ["https://i.postimg.cc/j23NvB6f/toys-2-580x870.jpg"],
     categoria: "for play",
@@ -257,7 +257,7 @@ const datos = [
     age: "6 - 7",
   },
   {
-    id: 16,
+    id: "16",
     sku: "0016",
     img: ["https://i.postimg.cc/kXZKS3g3/toys-3-580x870.jpg"],
     categoria: "for play",
@@ -272,7 +272,7 @@ const datos = [
     age: "1 - 3",
   },
   {
-    id: 17,
+    id: "17",
     sku: "0017",
     img: [
       "https://i.postimg.cc/ryfS8t6p/toys-4-580x870.jpg",
@@ -290,7 +290,7 @@ const datos = [
     age: "10 - 15",
   },
   {
-    id: 18,
+    id: "18",
     sku: "0018",
     img: ["https://i.postimg.cc/HnkXwTMH/toys-5-580x870.jpg"],
     categoria: "for play",
@@ -305,7 +305,7 @@ const datos = [
     age: "10 - 12",
   },
   {
-    id: 19,
+    id: "19",
     sku: "0019",
     img: ["https://i.postimg.cc/nzZvL4cX/toys-6-580x870.jpg"],
     categoria: "for play",
@@ -317,6 +317,204 @@ const datos = [
     tags: ["blouse", "boys"],
     color: "transparent",
     material: "plastic",
+    age: "2 - 6",
+  },
+  {
+    id: "20",
+    sku: "0020",
+    img: [
+      "https://i.postimg.cc/MGd7Cx3L/for-babies-1-580x870.jpg",
+      "https://i.postimg.cc/FzJ0kSFt/for-babies-1-1-580x870.jpg",
+    ],
+    categoria: "for babies",
+    nombre: "enterito",
+    precio: "30.00",
+    bestSeller: "false",
+    stock: 1,
+    ranking: 4,
+    tags: ["blouse", "boys"],
+    color: "brown",
+    material: "cotton",
+    age: "1 - 3",
+  },
+  {
+    id: "21",
+    sku: "0021",
+    img: [
+      "https://i.postimg.cc/90TJ5K7q/for-babies-10-580x870.jpg",
+      "https://i.postimg.cc/DZRBNn8T/for-babies-10-1-580x870.jpg",
+    ],
+    categoria: "for babies",
+    nombre: "pink shoes",
+    precio: "80.00",
+    bestSeller: "false",
+    stock: 1,
+    ranking: 5,
+    tags: ["shoes", "girls"],
+    color: "pink",
+    material: "jersey",
+    age: "0 - 3",
+  },
+  {
+    id: "22",
+    sku: "0022",
+    img: [
+      "https://i.postimg.cc/qMsjmfrP/for-babies-11-580x870.jpg",
+      "https://i.postimg.cc/9Qc1KxFr/for-babies-11-1-580x870.jpg",
+    ],
+    categoria: "for babies",
+    nombre: "Pijama Dinosaurios",
+    precio: "100.00",
+    bestSeller: "false",
+    stock: 0,
+    ranking: 3,
+    tags: ["dinosaurios", "boys"],
+    color: "gray",
+    material: "cotton",
+    age: "0 - 3",
+  },
+  {
+    id: "23",
+    sku: "0023",
+    img: [
+      "https://i.postimg.cc/SxL7Gc6k/for-babies-2-580x870.jpg",
+      "https://i.postimg.cc/1RgdrYfS/for-babies-2-1-580x870.jpg",
+    ],
+    categoria: "for babies",
+    nombre: "Pink Blouse",
+    precio: "45.00",
+    bestSeller: "false",
+    stock: 1,
+    ranking: 5,
+    tags: ["blouse", "babies, girls"],
+    color: "pink",
+    material: "cotton",
+    age: "0 - 3",
+  },
+  {
+    id: "24",
+    sku: "0024",
+    img: [
+      "https://i.postimg.cc/N0g8CLDT/for-babies-3-580x870.jpg",
+      "https://i.postimg.cc/1tdpzBQc/for-babies-3-1-580x870.jpg",
+    ],
+    categoria: "for babies",
+    nombre: "enterito rosa",
+    precio: "80.00",
+    bestSeller: "false",
+    stock: 0,
+    ranking: 5,
+    tags: ["enterito", "girls"],
+    color: "pink",
+    material: "jean",
+    age: "1 - 3",
+  },
+  {
+    id: "25",
+    sku: "0025",
+    img: [
+      "https://i.postimg.cc/RZxLfgng/for-babies-4-580x870.jpg",
+      "https://i.postimg.cc/76h3DcpZ/for-babies-4-1-580x870.jpg",
+    ],
+    categoria: "for babies",
+    nombre: "shirt",
+    precio: "60.00",
+    bestSeller: "false",
+    stock: 3,
+    ranking: 5,
+    tags: ["shirt", "girls"],
+    color: "pink",
+    material: "cotton",
+    age: "0 - 3",
+  },
+  {
+    id: "26",
+    sku: "0026",
+    img: [
+      "https://i.postimg.cc/wTLbSyXb/for-babies-5-580x870.jpg",
+      "https://i.postimg.cc/QdqYd2nQ/for-babies-5-1-580x870.jpg",
+    ],
+    categoria: "for babies",
+    nombre: "gray shirt",
+    precio: "25.00",
+    bestSeller: "false",
+    stock: 1,
+    ranking: 5,
+    tags: ["blouse", "girls", "babies"],
+    color: "gray",
+    material: "cootn",
+    age: "0 - 3",
+  },
+  {
+    id: "27",
+    sku: "0027",
+    img: [
+      "https://i.postimg.cc/XYWD3jxN/for-babies-6-580x870.jpg",
+      "https://i.postimg.cc/638Mzy6c/for-babies-6-1-580x870.jpg",
+    ],
+    categoria: "for babies",
+    nombre: "enterito gris",
+    precio: "50.00",
+    bestSeller: "false",
+    stock: 0,
+    ranking: 5,
+    tags: ["enterito", "boys"],
+    color: "gray",
+    material: "cotton",
+    age: "0 - 3",
+  },
+  {
+    id: "28",
+    sku: "0028",
+    img: [
+      "https://i.postimg.cc/2STTD4VT/for-babies-7-580x870.jpg",
+      "https://i.postimg.cc/yNbPJshZ/for-babies-7-1-580x870.jpg",
+    ],
+    categoria: "for babies",
+    nombre: "sandalias rosas",
+    precio: "40.00",
+    bestSeller: "false",
+    stock: 1,
+    ranking: 5,
+    tags: ["shoes", "girls"],
+    color: "pink",
+    material: "cuero",
+    age: "0 - 5",
+  },
+  {
+    id: "29",
+    sku: "0029",
+    img: [
+      "https://i.postimg.cc/QM46ppDV/for-babies-8-580x870.jpg",
+      "https://i.postimg.cc/0N2WMVLL/for-babies-8-1-580x870.jpg",
+    ],
+    categoria: "for babies",
+    nombre: "remera marron",
+    precio: "10.00",
+    bestSeller: "false",
+    stock: 0,
+    ranking: 3,
+    tags: ["blouse", "boys"],
+    color: "brown",
+    material: "cotton",
+    age: "1 - 4",
+  },
+  {
+    id: "30",
+    sku: "0030",
+    img: [
+      "https://i.postimg.cc/LsXD6nPS/for-babies-9-580x870.jpg",
+      "https://i.postimg.cc/0QKCDFZH/for-babies-9-1-580x870.jpg",
+    ],
+    categoria: "for babies",
+    nombre: "campera esquimal",
+    precio: "300.00",
+    bestSeller: "false",
+    stock: 10,
+    ranking: 5,
+    tags: ["girls", "campera", "winter"],
+    color: "brown",
+    material: "cuero",
     age: "2 - 6",
   },
 ];
@@ -377,28 +575,140 @@ const reviews = [
     descripcion:
       "Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas y editoriales para previsualiza",
   },
+  {
+    id: 6,
+    fecha: "December 5, 2022",
+    idProd: 13,
+    user: "Pablo Di Pietro",
+    userImg: "https://i.postimg.cc/rFW7bBrL/perfil.jpg",
+    rankOtorgado: 4,
+    descripcion:
+      "Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas y editoriales para previsualiza",
+  },
+  {
+    id: 7,
+    fecha: "December 15, 2018",
+    idProd: 14,
+    user: "Pepe Incognito",
+    userImg:
+      "https://i.postimg.cc/8PDx2yBJ/kisspng-computer-icons-person-black-shadow-5b25efb1047fd8-0063000815292128490184.png",
+    rankOtorgado: 5,
+    descripcion:
+      "Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas y editoriales para previsualiza",
+  },
+  {
+    id: 8,
+    fecha: "December 5, 2022",
+    idProd: 8,
+    user: "Pablo Di Pietro",
+    userImg: "https://i.postimg.cc/rFW7bBrL/perfil.jpg",
+    rankOtorgado: 4,
+    descripcion:
+      "Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas y editoriales para previsualiza",
+  },
+  {
+    id: 9,
+    fecha: "December 15, 2018",
+    idProd: 16,
+    user: "Pepe Incognito",
+    userImg:
+      "https://i.postimg.cc/8PDx2yBJ/kisspng-computer-icons-person-black-shadow-5b25efb1047fd8-0063000815292128490184.png",
+    rankOtorgado: 5,
+    descripcion:
+      "Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas y editoriales para previsualiza",
+  },
+  {
+    id: 10,
+    fecha: "December 5, 2022",
+    idProd: 25,
+    user: "Pablo Di Pietro",
+    userImg: "https://i.postimg.cc/rFW7bBrL/perfil.jpg",
+    rankOtorgado: 4,
+    descripcion:
+      "Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas y editoriales para previsualiza",
+  },
+  {
+    id: 11,
+    fecha: "December 15, 2018",
+    idProd: 21,
+    user: "Pepe Incognito",
+    userImg:
+      "https://i.postimg.cc/8PDx2yBJ/kisspng-computer-icons-person-black-shadow-5b25efb1047fd8-0063000815292128490184.png",
+    rankOtorgado: 5,
+    descripcion:
+      "Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas y editoriales para previsualiza",
+  },
+  {
+    id: 12,
+    fecha: "December 5, 2022",
+    idProd: 12,
+    user: "Pablo Di Pietro",
+    userImg: "https://i.postimg.cc/rFW7bBrL/perfil.jpg",
+    rankOtorgado: 2,
+    descripcion:
+      "Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas y editoriales para previsualiza",
+  },
+  {
+    id: 13,
+    fecha: "December 15, 2018",
+    idProd: 9,
+    user: "Pepe Incognito",
+    userImg:
+      "https://i.postimg.cc/8PDx2yBJ/kisspng-computer-icons-person-black-shadow-5b25efb1047fd8-0063000815292128490184.png",
+    rankOtorgado: 5,
+    descripcion:
+      "Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas y editoriales para previsualiza",
+  },
+  {
+    id: 14,
+    fecha: "December 5, 2022",
+    idProd: 28,
+    user: "Pablo Di Pietro",
+    userImg: "https://i.postimg.cc/rFW7bBrL/perfil.jpg",
+    rankOtorgado: 4,
+    descripcion:
+      "Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas y editoriales para previsualiza",
+  },
+  {
+    id: 15,
+    fecha: "December 15, 2018",
+    idProd: 29,
+    user: "Pepe Incognito",
+    userImg:
+      "https://i.postimg.cc/8PDx2yBJ/kisspng-computer-icons-person-black-shadow-5b25efb1047fd8-0063000815292128490184.png",
+    rankOtorgado: 5,
+    descripcion:
+      "Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas y editoriales para previsualiza",
+  },
+];
+const imgtira = [
+  { img: "https://i.postimg.cc/sXFFTngv/tira1.jpg", id: 1 },
+  { img: "https://i.postimg.cc/VvR3LmBC/tira2.jpg", id: 2 },
+  { img: "https://i.postimg.cc/90V6hrT2/tira3.jpg", id: 3 },
+  { img: "https://i.postimg.cc/LXjcwzJv/tira4.jpg", id: 4 },
+  { img: "https://i.postimg.cc/qBxfGxVv/tira5.jpg", id: 5 },
 ];
 
-const useHover = () => {
-  const [value, setValue] = useState(false);
-  const ref = useRef(null);
-  const handleMouseOver = () => setValue(true);
-  const handleMouseOut = () => setValue(false);
-  useEffect(
-    () => {
-      const node = ref.current;
-      if (node) {
-        node.addEventListener("mouseover", handleMouseOver);
-        node.addEventListener("mouseout", handleMouseOut);
-        return () => {
-          node.removeEventListener("mouseover", handleMouseOver);
-          node.removeEventListener("mouseout", handleMouseOut);
-        };
-      }
-    },
-    [ref.current] // Recall only if ref changes
-  );
-  return [ref, value];
-};
+// const useHover = () => {
+//   const [value, setValue] = useState(false);
+//   const ref = useRef(null);
+//   const handleMouseOver = () => setValue(true);
+//   const handleMouseOut = () => setValue(false);
+//   useEffect(
+//     () => {
+//       const node = ref.current;
+//       if (node) {
+//         node.addEventListener("mouseover", handleMouseOver);
+//         node.addEventListener("mouseout", handleMouseOut);
+//         return () => {
+//           node.removeEventListener("mouseover", handleMouseOver);
+//           node.removeEventListener("mouseout", handleMouseOut);
+//         };
+//       }
+//     },
+//     [ref.current] // Recall only if ref changes
+//   );
+//   return [ref, value];
+// };
 
-module.exports = { datos, getRanking, reviews, useHover };
+module.exports = { datos, getRanking, reviews, imgtira };

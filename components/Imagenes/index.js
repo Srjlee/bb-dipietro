@@ -5,15 +5,13 @@ import Image from "next/image";
 export default function index({ imagenes }) {
   return (
     <div className={s.container}>
-      {imagenes.map((i) => {
+      {imagenes?.map((i) => {
         return (
-          <Image
-            key={i.id}
-            src={i.img}
-            width="200"
+          <div
             className={s.img}
-            alt="Imagen Footer"
-          />
+            style={{ backgroundImage: `url(${i.img})` }}
+            key={i.id}
+          ></div>
         );
       })}
     </div>

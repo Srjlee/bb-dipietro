@@ -1,5 +1,5 @@
-import { useState, useCallback, useContext } from "react";
-import { cartContext } from "../../../context/provider";
+// import { useState, useCallback, useContext } from "react";
+// import { cartContext } from "../../../context/provider";
 import Banner from "../../../components/Banner";
 import Navbar from "../../../components/Navbar";
 import ProductDetail from "../../../components/ProductDetail";
@@ -12,7 +12,6 @@ import Footer from "../../../components/Footer";
 
 export default function pDetail({ prod, rev, related }) {
   const renderRelated = related.slice(0, 4);
-  const { favoritos, cart } = useContext(cartContext);
 
   return (
     <>
@@ -40,8 +39,9 @@ export async function getServerSideProps(context) {
   const { params } = context;
   let { id } = params;
 
-  const productoApi = await fetch(`http://localhost:3000/api/producto/${id}`);
-  const resp = await productoApi.json();
+  const buscoProducto = await fetch(`http://localhost:3000/api/producto/${id}`);
+
+  const resp = await buscoProducto.json();
 
   return {
     props: {

@@ -13,20 +13,7 @@ import Producto from "../components/Producto";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import Imagenes from "../components/Imagenes";
-import tira1 from "../public/img/tira/tira1.jpg";
-import tira2 from "../public/img/tira/tira2.jpg";
-import tira3 from "../public/img/tira/tira3.jpg";
-import tira4 from "../public/img/tira/tira4.jpg";
-import tira5 from "../public/img/tira/tira5.jpg";
-import pruebaIMG from "../public/img/prod/blueBlouse.jpg";
-
-const imagenes = [
-  { img: tira1, id: 1 },
-  { img: tira2, id: 2 },
-  { img: tira3, id: 3 },
-  { img: tira4, id: 4 },
-  { img: tira5, id: 5 },
-];
+import { imgtira } from "../public/datos";
 
 export default function Home({ productos, qCategories, bestSeller }) {
   const { cart, setCart } = useContext(cartContext);
@@ -43,7 +30,7 @@ export default function Home({ productos, qCategories, bestSeller }) {
           <section className={s.categorias}>
             <SearchBar />
             <Categorias qCat={qCategories} />
-            <BestSellers productos={bestSeller} imagen={pruebaIMG.src} />
+            <BestSellers productos={bestSeller} />
             <Newsletter />
           </section>
 
@@ -55,7 +42,7 @@ export default function Home({ productos, qCategories, bestSeller }) {
         </main>
 
         <Divisor text="INSTAGRAM @KISRUS" />
-        <Imagenes imagenes={imagenes} />
+        <Imagenes imagenes={imgtira} />
       </div>
       <Footer />
     </div>

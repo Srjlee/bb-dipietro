@@ -43,7 +43,7 @@ export default function MenuAddData({ rev, prod }) {
         <p className={s.qReviews}>
           {rev.length} reviews for {prod.nombre}
         </p>
-        {rev.map((r) => {
+        {rev?.map((r) => {
           return (
             <div className={s.datosReviews} key={r.id} multiple>
               <div

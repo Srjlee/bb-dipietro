@@ -1,9 +1,9 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import s from "./pDetail.module.css";
 import { getRanking } from "../../public/datos";
 import AddToCart from "./addToCart";
 import AdditionalData from "./AdditionalData";
-import { useHover } from "../../public/datos";
+// import { useHover } from "../../public/datos";
 import { cartContext } from "../../context/provider";
 
 export default function index({ prod }) {
@@ -78,7 +78,7 @@ export default function index({ prod }) {
           more recen
         </p>
         <div className={s.addToCart}>
-          <AddToCart />
+          <AddToCart prod={prod} />
           {isFav ? (
             <div className={s.wishlist}>
               <p>Product added! </p>
@@ -90,4 +90,26 @@ export default function index({ prod }) {
       </div>
     </div>
   );
+}
+
+function useHover() {
+  const [value, setValue] = useState(false);
+  const ref = useRef(null);
+  const handleMouseOver = () => setValue(true);
+  const handleMouseOut = () => setValue(false);
+  useEffect(
+    () => {
+      const node = ref.current;
+      if (node) {
+        node.addEventListener("mouseover", handleMouseOver);
+        node.addEventListener("mouseout", handleMouseOut);
+        return () => {
+          node.removeEventListener("mouseover", handleMouseOver);
+          node.removeEventListener("mouseout", handleMouseOut);
+        };
+      }
+    },
+    [ref.current] // Recall only if ref changes
+  );
+  return [ref, value];
 }
