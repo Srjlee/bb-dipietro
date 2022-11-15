@@ -52,7 +52,7 @@ export default function Home({ productos, qCategories, bestSeller }) {
 export async function getServerSideProps(context) {
   const { categoria } = context.query;
 
-  const ruta = `http://localhost:3000/api/datos${
+  const ruta = `${process.env.URL}/api/datos${
     categoria ? `?categoria=${categoria}` : ""
   }`;
 

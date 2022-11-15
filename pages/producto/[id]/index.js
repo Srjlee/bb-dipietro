@@ -39,7 +39,7 @@ export async function getServerSideProps(context) {
   const { params } = context;
   let { id } = params;
 
-  const buscoProducto = await fetch(`http://localhost:3000/api/producto/${id}`);
+  const buscoProducto = await fetch(`${process.env.URL}/api/producto/${id}`);
 
   const resp = await buscoProducto.json();
 
