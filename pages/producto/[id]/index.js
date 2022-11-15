@@ -1,5 +1,5 @@
-import { useState, useCallback } from "react";
-
+import { useState, useCallback, useContext } from "react";
+import { cartContext } from "../../../context/provider";
 import Banner from "../../../components/Banner";
 import Navbar from "../../../components/Navbar";
 import ProductDetail from "../../../components/ProductDetail";
@@ -12,8 +12,7 @@ import Footer from "../../../components/Footer";
 
 export default function pDetail({ prod, rev, related }) {
   const renderRelated = related.slice(0, 4);
-
-  
+  const { favoritos, cart } = useContext(cartContext);
 
   return (
     <>
@@ -31,7 +30,6 @@ export default function pDetail({ prod, rev, related }) {
             return <Producto prod={p} key={p.id} />;
           })}
         </div>
-        
       </div>
       <Footer />
     </>

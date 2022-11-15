@@ -1,16 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import s from "./pDetail.module.css";
 import { getRanking } from "../../public/datos";
 import AddToCart from "./addToCart";
 import AdditionalData from "./AdditionalData";
 import { useHover } from "../../public/datos";
+import { cartContext } from "../../context/provider";
 
 export default function index({ prod }) {
   const [imgRender, setImgRender] = useState("");
   const [hoverRef, isHovered] = useHover();
   const [ejes, setEjes] = useState({ x: 0, y: 0 });
+  const { favoritos } = useContext(cartContext);
+  const [isFav, setIsfav] = useState(false);
 
   useEffect(() => {
+    if (favoritos.includes(prod.id)) {
+      setIsfav(true);
+    }
     setImgRender(prod.img[0]);
   }, [prod]);
 
@@ -73,10 +79,12 @@ export default function index({ prod }) {
         </p>
         <div className={s.addToCart}>
           <AddToCart />
-          <div className={s.wishlist}>
-            <p>Product added! </p>
-            <p>Browse Wishlist</p>
-          </div>
+          {isFav ? (
+            <div className={s.wishlist}>
+              <p>Product added! </p>
+              <p>Browse Wishlist</p>
+            </div>
+          ) : null}
           <AdditionalData prod={prod} />
         </div>
       </div>

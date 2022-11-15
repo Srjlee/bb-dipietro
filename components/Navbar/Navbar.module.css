@@ -19,3 +19,17 @@
   font-weight: 100;
   color: #486683;
 }
+.itemsCart {
+  height: 1rem;
+  width: 1rem;
+  background-color: var(--rojo);
+  font-size: 0.7rem;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  font-family: var(--quick);
+  opacity: 90%;
+  font-weight: 700;
+  bottom: 70%;
+  left: 55%;
+}

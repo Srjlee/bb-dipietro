@@ -7,6 +7,7 @@ import subrayado from "../../public/home-8.png";
 
 export default function MenuAddData({ rev, prod }) {
   const [mostrar, setMostrar] = useState("");
+
   const InfoData = {
     descripcion: (
       <div className={s.descripcion}>

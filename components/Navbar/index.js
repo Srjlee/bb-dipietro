@@ -1,10 +1,13 @@
-import React from "react";
+import { useContext } from "react";
 import Image from "next/image";
 import logo from "./logo-retina.png";
 import s from "./Navbar.module.css";
 import Link from "next/link";
+import { cartContext } from "../../context/provider";
 
 export default function Navbar() {
+  const { cart, favoritos } = useContext(cartContext);
+
   return (
     <div>
       <nav className={s.navBar}>
@@ -31,7 +34,7 @@ export default function Navbar() {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="#486683"
-              fill="none"
+              fill={favoritos.length == 0 ? "none" : "currentcolor"}
               strokeLinecap="round"
               strokeLinejoin="round"
             >
@@ -57,6 +60,9 @@ export default function Navbar() {
               <path d="M17 17h-11v-14h-2" />
               <path d="M6 5l14 1l-1 7h-13" />
             </svg>
+            {cart.length > 0 && (
+              <div className={s.itemsCart}>{cart.length}</div>
+            )}
           </li>
           <li>
             <svg
