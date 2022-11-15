@@ -3,7 +3,7 @@ import s from "./Producto.module.css";
 import Link from "next/link";
 import { cartContext } from "../../context/provider";
 
-export default function index({ prod }) {
+export default function Producto({ prod }) {
   const [hoverRef, isHovered] = useHover();
   const [imgRender, setImgRender] = useState(prod.img[0]);
   const { setCart, setFavoritos, favoritos } = useContext(cartContext);

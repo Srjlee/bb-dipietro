@@ -2,8 +2,9 @@ import { useContext } from "react";
 import s from "./addToCart.module.css";
 import { cartContext } from "../../context/provider";
 
-export default function index({ prod }) {
+export default function AddToCart({ prod }) {
   const { setCart } = useContext(cartContext);
+
   const buyHandle = () => {
     setCart((prev) => [...prev, prod.id]);
   };

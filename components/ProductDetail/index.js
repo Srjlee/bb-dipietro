@@ -6,7 +6,7 @@ import AdditionalData from "./AdditionalData";
 // import { useHover } from "../../public/datos";
 import { cartContext } from "../../context/provider";
 
-export default function index({ prod }) {
+export default function ProductDetail({ prod }) {
   const [imgRender, setImgRender] = useState("");
   const [hoverRef, isHovered] = useHover();
   const [ejes, setEjes] = useState({ x: 0, y: 0 });
