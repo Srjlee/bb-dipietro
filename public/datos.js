@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-const productos = [
+const datos = [
   {
     id: 1,
     sku: "0001",
@@ -223,6 +223,102 @@ const productos = [
     material: "cotton",
     age: 6,
   },
+  {
+    id: 14,
+    sku: "0014",
+    img: [
+      "https://i.postimg.cc/TYhnhYGJ/toys-1-580x870.jpg",
+      "https://i.postimg.cc/XJ89BrpQ/toys-1-2-580x870.jpg",
+    ],
+    categoria: "for play",
+    nombre: "Juego de Encastre",
+    precio: "80.00",
+    bestSeller: "false",
+    stock: 5,
+    ranking: 3,
+    tags: ["madera", "girls, boys"],
+    color: "multicolor",
+    material: "corderoy",
+    age: "10 - 12",
+  },
+  {
+    id: 15,
+    sku: "0015",
+    img: ["https://i.postimg.cc/j23NvB6f/toys-2-580x870.jpg"],
+    categoria: "for play",
+    nombre: "Carrito",
+    precio: "150.00",
+    bestSeller: "false",
+    stock: 1,
+    ranking: 3,
+    tags: ["cart", "girls"],
+    color: "purple",
+    material: "corderoy",
+    age: "6 - 7",
+  },
+  {
+    id: 16,
+    sku: "0016",
+    img: ["https://i.postimg.cc/kXZKS3g3/toys-3-580x870.jpg"],
+    categoria: "for play",
+    nombre: "Arco Iris",
+    precio: "30.00",
+    bestSeller: "false",
+    stock: 0,
+    ranking: 2,
+    tags: ["girls"],
+    color: "blue",
+    material: "wood",
+    age: "1 - 3",
+  },
+  {
+    id: 17,
+    sku: "0017",
+    img: [
+      "https://i.postimg.cc/ryfS8t6p/toys-4-580x870.jpg",
+      "https://i.postimg.cc/13q6cC8g/toys-4-2-580x870.jpg",
+    ],
+    categoria: "for play",
+    nombre: "Pink Rabbit",
+    precio: "160.00",
+    bestSeller: "false",
+    stock: 15,
+    ranking: 5,
+    tags: ["rabbit", "girls"],
+    color: "pink",
+    material: "jersey",
+    age: "10 - 15",
+  },
+  {
+    id: 18,
+    sku: "0018",
+    img: ["https://i.postimg.cc/HnkXwTMH/toys-5-580x870.jpg"],
+    categoria: "for play",
+    nombre: "Hombre de las Nieves",
+    precio: "40.00",
+    bestSeller: "false",
+    stock: 0,
+    ranking: 4,
+    tags: ["bear", "girls"],
+    color: "white",
+    material: "corderoy",
+    age: "10 - 12",
+  },
+  {
+    id: 19,
+    sku: "0019",
+    img: ["https://i.postimg.cc/nzZvL4cX/toys-6-580x870.jpg"],
+    categoria: "for play",
+    nombre: "sticker",
+    precio: "10.00",
+    bestSeller: "false",
+    stock: 1,
+    ranking: 5,
+    tags: ["blouse", "boys"],
+    color: "transparent",
+    material: "plastic",
+    age: "2 - 6",
+  },
 ];
 const getRanking = (ranking) => {
   return "★".repeat(ranking).padEnd(5, "☆");
@@ -305,4 +401,4 @@ const useHover = () => {
   return [ref, value];
 };
 
-module.exports = { productos, getRanking, reviews, useHover };
+module.exports = { datos, getRanking, reviews, useHover };

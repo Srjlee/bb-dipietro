@@ -14,11 +14,19 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.imagen:hover {
+  cursor: zoom-in;
+}
 .carrousel {
   grid-area: 6 / 1 / 7 / 2;
   background-color: white;
   display: flex;
 }
+.carrousel:hover {
+  cursor: pointer;
+}
+
 .detalle {
   grid-area: 1 / 2 / 7 / 3;
 }

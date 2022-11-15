@@ -39,8 +39,14 @@ const search = (
 
 export default function index({ prod }) {
   const [hoverRef, isHovered] = useHover();
+  const [imgRender, setImgRender] = useState(prod.img[0]);
 
-  const imgRender = isHovered ? prod.img[1] : prod.img[0];
+  useEffect(() => {
+    setImgRender(prod.img[0]);
+    if (prod.img[1] && isHovered) {
+      setImgRender(prod.img[1]);
+    }
+  }, [isHovered]);
 
   return (
     <div className={s.container}>

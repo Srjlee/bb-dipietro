@@ -28,7 +28,7 @@ const imagenes = [
   { img: tira5, id: 5 },
 ];
 
-export default function Home({ productos }) {
+export default function Home({ productos, qCategories, bestSeller }) {
   const { cart, setCart } = useContext(cartContext);
 
   return (
@@ -39,15 +39,15 @@ export default function Home({ productos }) {
         <Destacados />
         <Categorias_banner />
         <Divisor text="NEW ARRIVALS" />
-        <main className={s.Categorias_Productos}>
-          <sidebar className={s.categorias}>
+        <main className={s.Categorias_Productos} id="productos">
+          <section className={s.categorias}>
             <SearchBar />
-            <Categorias />
-            <BestSellers productos={productos} imagen={pruebaIMG.src} />
+            <Categorias qCat={qCategories} />
+            <BestSellers productos={bestSeller} imagen={pruebaIMG.src} />
             <Newsletter />
-          </sidebar>
+          </section>
 
-          {productos?.map((prod) => {
+          {productos?.slice(0, 9).map((prod) => {
             if (prod.bestSeller == "false") {
               return <Producto prod={prod} key={prod.id} />;
             }
@@ -70,11 +70,13 @@ export async function getServerSideProps(context) {
   }`;
 
   const consApi = await fetch(ruta);
-  const productos = await consApi.json();
+  const { productos, qCategories, bestSeller } = await consApi.json();
 
   return {
     props: {
-      productos: productos,
+      productos,
+      qCategories,
+      bestSeller,
     },
   };
 }
