@@ -2,7 +2,7 @@ import React from "react";
 import s from "./div.module.css";
 import Link from "next/link";
 
-export default function divisor({ prod }) {
+export default function Divisor({ prod }) {
   return (
     <div className={s.container}>
       <p className={s.titulo}>{prod.nombre}</p>

@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./Banner.module.css";
 
-export default function index() {
+export default function Banner() {
   return (
     <div>
       <div className={s.banner}>

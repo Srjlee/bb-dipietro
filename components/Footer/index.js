@@ -54,7 +54,7 @@ const twiter = (
   </svg>
 );
 
-export default function index() {
+export default function Footer() {
   return (
     <div className={s.container}>
       <Navbar />

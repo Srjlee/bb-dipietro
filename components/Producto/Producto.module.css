@@ -19,6 +19,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  transition: all 0.5s;
 }
 
 .datos {
@@ -60,6 +61,7 @@
   height: 0;
   margin: 0;
   background-color: var(--rojo);
+  transition: all 0.5s;
 }
 .addToCart_datos {
   font-family: "Francois One", sans-serif;

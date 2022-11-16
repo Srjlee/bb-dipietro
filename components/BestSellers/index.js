@@ -24,7 +24,7 @@ const BestSeller = ({ prod }) => {
   );
 };
 
-export default function index({ productos }) {
+export default function Best({ productos }) {
   return (
     <div className={s.container}>
       <h3>BEST SELLERS</h3>

@@ -4,7 +4,7 @@ import s from "./Destacados.module.css";
 import girlPower from "./girls-power.jpg";
 import Link from "next/link";
 
-export default function index() {
+export default function Destacados() {
   return (
     <div>
       <section className={s.destacados}>
@@ -21,7 +21,7 @@ export default function index() {
           </div>
         </div>
         <div className={s.destacado_2}>
-          <Image src={girlPower} width="320" alt="girl Power" priority />
+          <Image src={girlPower} width="320" alt="girl Power" />
           <Link href="/?categoria=for%20girls#productos">
             <div className={s.destacado_2_datos}>
               <h3>GIRL POWER</h3>

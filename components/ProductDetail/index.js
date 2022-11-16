@@ -3,7 +3,7 @@ import s from "./pDetail.module.css";
 import { getRanking } from "../../public/datos";
 import AddToCart from "./addToCart";
 import AdditionalData from "./AdditionalData";
-// import { useHover } from "../../public/datos";
+
 import { cartContext } from "../../context/provider";
 
 export default function ProductDetail({ prod }) {
@@ -97,19 +97,16 @@ function useHover() {
   const ref = useRef(null);
   const handleMouseOver = () => setValue(true);
   const handleMouseOut = () => setValue(false);
-  useEffect(
-    () => {
-      const node = ref.current;
-      if (node) {
-        node.addEventListener("mouseover", handleMouseOver);
-        node.addEventListener("mouseout", handleMouseOut);
-        return () => {
-          node.removeEventListener("mouseover", handleMouseOver);
-          node.removeEventListener("mouseout", handleMouseOut);
-        };
-      }
-    },
-    [ref.current] // Recall only if ref changes
-  );
+  useEffect(() => {
+    const node = ref.current;
+    if (node) {
+      node.addEventListener("mouseover", handleMouseOver);
+      node.addEventListener("mouseout", handleMouseOut);
+      return () => {
+        node.removeEventListener("mouseover", handleMouseOver);
+        node.removeEventListener("mouseout", handleMouseOut);
+      };
+    }
+  }, [ref.current]);
   return [ref, value];
 }

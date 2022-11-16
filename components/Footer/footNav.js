@@ -3,12 +3,12 @@ import Image from "next/image";
 import logo from "./logo_retina.png";
 import s from "./footNav.module.css";
 
-export default function Navbar() {
+export default function FootNav() {
   return (
     <div>
       <nav className={s.navBar}>
         <div className={s.logo}>
-          <Image src={logo} height="90" alt="logo" priority />
+          <Image src={logo} height="90" alt="logo" />
         </div>
 
         <ul className={s.bar}>

@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./additionalData.module.css";
 
-export default function additionalData({ prod }) {
+export default function AdditionalData({ prod }) {
   return (
     <div className={s.container}>
       <div className={s.datos}>

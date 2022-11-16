@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./News.module.css";
 
-export default function index() {
+export default function News() {
   return (
     <div className={s.container}>
       <div className={s.titulo}>

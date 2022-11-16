@@ -1,15 +1,34 @@
-import React from "react";
-//import Image from "next/image";
+import { useState, useEffect } from "react";
 import s from "./SearchBar.module.css";
-//import buscar from "../../public/img/buscar.png";
+import axios from "axios";
+import Link from "next/link";
 
-export default function index() {
+export default function SearchBar() {
+  const [r, setR] = useState([]);
+  const [search, setSearch] = useState({
+    search: "",
+  });
+
+  useEffect(() => {
+    axios(`/api/search?nombre=${search.search}`).then((d) => setR(d.data));
+  }, [search]);
+
+  const handleInput = (e) => {
+    setSearch({
+      ...search,
+      [e.target.name]: e.target.value.toLowerCase(),
+    });
+  };
+
   return (
-    <div className={s.container}>
+    <div className={s.container} id="searchbar">
       <input
         type="text"
         className={s.search}
         placeholder="Search products..."
+        name="search"
+        value={search.search}
+        onChange={handleInput}
       />
       <div className={s.contenedor_img}>
         <div className={s.imagen}>
@@ -30,6 +49,17 @@ export default function index() {
           </svg>
         </div>
       </div>
+      {r.length > 0 && (
+        <div className={s.resultado}>
+          {r.map((p) => {
+            return (
+              <Link href={`/producto/${p.id}`} key={p.id}>
+                <p>{p.nombre}</p>
+              </Link>
+            );
+          })}{" "}
+        </div>
+      )}
     </div>
   );
 }

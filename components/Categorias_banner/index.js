@@ -7,7 +7,7 @@ import girl from "../../public/img/girl.png";
 import toys from "../../public/img/toys.png";
 import Link from "next/link";
 
-export default function index() {
+export default function Categorias_banner() {
   return (
     <section className={s.container}>
       <Link href="/?categoria=for baby#productos">

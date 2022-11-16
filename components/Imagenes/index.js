@@ -1,8 +1,7 @@
 import React from "react";
 import s from "./Img.module.css";
-import Image from "next/image";
 
-export default function index({ imagenes }) {
+export default function Imagenes({ imagenes }) {
   return (
     <div className={s.container}>
       {imagenes?.map((i) => {

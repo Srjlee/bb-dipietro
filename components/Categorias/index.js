@@ -2,7 +2,7 @@ import React from "react";
 import s from "./Categorias.module.css";
 import Link from "next/link";
 
-export default function index({ qCat }) {
+export default function Categorias({ qCat }) {
   return (
     <div className={s.container}>
       <h3>CATEGORIES</h3>

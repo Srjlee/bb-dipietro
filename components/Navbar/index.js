@@ -13,7 +13,7 @@ export default function Navbar() {
       <nav className={s.navBar}>
         <Link href="/">
           <div className={s.logo}>
-            <Image src={logo} height="90" alt="logo" priority />
+            <Image src={logo} height="90" alt="logo" />
           </div>
         </Link>
 
@@ -64,23 +64,25 @@ export default function Navbar() {
               <div className={s.itemsCart}>{cart.length}</div>
             )}
           </li>
-          <li>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="#486683"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <circle cx="10" cy="10" r="7" />
-              <line x1="21" y1="21" x2="15" y2="15" />
-            </svg>
-          </li>
+          <Link href="/#searchbar">
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="#486683"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <circle cx="10" cy="10" r="7" />
+                <line x1="21" y1="21" x2="15" y2="15" />
+              </svg>
+            </li>
+          </Link>
         </ul>
       </nav>
     </div>

@@ -3,7 +3,7 @@ import s from "./Divisor.module.css";
 import Image from "next/image";
 import divisor from "../../public/home-8.png";
 
-export default function index({ text, ul }) {
+export default function Divisor({ text }) {
   return (
     <div className={s.container}>
       <h3>{text}</h3>
